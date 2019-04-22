@@ -79,7 +79,7 @@
         var columnsArray = [];
         //二维数组对应为表中的行/列
         var tagArray = [["ZCL", "TBT", "HQL", "XYL", "XQL", "ZXA", "ZXB", "ZXC", "JXL", "WQS", "XJL", "HJL", "ML", "XCYZ"], ["泵站", "1HBENG_YUNXING", "2HBENG_YUNXING", "3HBENG_YUNXING", "4HBENG_YUNXING", "1HGESHAN_YUNXING", "QIANYEWEI", "HOUYEWEI", "PH", "1HBENG_SSLL", "2HBENG_SSLL", "3HBENG_SSLL", "4HBENG_SSLL"]];
-        var valueName = ['泵站名', '1号泵', '2号泵', '3号泵', '4号泵', '1号格栅', '前液位', '后液位', 'PH', '1号瞬时流量', '2号瞬时流量', '3号瞬时流量', '4号瞬时流量', '1号累计流量'];//列名，注意与tagArray[1]对应
+        var valueName = ['泵站名', '1号泵', '2号泵', '3号泵', '4号泵', '格栅', '前液位（m）', '后液位(m)', 'PH', '1号瞬时流量(m³/h)', '2号瞬时流量(m³/h)', '3号瞬时流量(m³/h)', '4号瞬时流量(m³/h)'];//列名，注意与tagArray[1]对应
         var pumpName = ["赵重路", "通波塘", "华青路", "新业路", "新区路", "赵巷A", "赵巷B", "赵巷C", "金星路", "外青松", "新金路", "汇金路", "民乐路", "新城一站"];//行名，注意与tagArray[0]对应
         wsc = new WebSocket("ws://10.0.0.134:6690/WsServices");
 
