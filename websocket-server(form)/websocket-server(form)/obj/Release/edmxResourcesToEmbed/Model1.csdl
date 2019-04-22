@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="fristModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DataInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataTime" Type="DateTime" Precision="3" />
+    <Property Name="oldLqdLevl" Type="Double" />
+    <Property Name="youngLqdLevl" Type="Double" />
+    <Property Name="PH" Type="Double" />
+    <Property Name="COD" Type="Double" />
+    <Property Name="NH3N" Type="Double" />
+    <Property Name="TP" Type="Double" />
+    <Property Name="B_ID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="fristEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DataInfo" EntityType="Self.DataInfo" />
+  </EntityContainer>
+</Schema>

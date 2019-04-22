@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="fristModelStoreContainer" CdmEntityContainer="fristEntities1">
+    <EntitySetMapping Name="DataInfo">
+      <EntityTypeMapping TypeName="fristModel.DataInfo">
+        <MappingFragment StoreEntitySet="DataInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DataTime" ColumnName="DataTime" />
+          <ScalarProperty Name="oldLqdLevl" ColumnName="oldLqdLevl" />
+          <ScalarProperty Name="youngLqdLevl" ColumnName="youngLqdLevl" />
+          <ScalarProperty Name="PH" ColumnName="PH" />
+          <ScalarProperty Name="COD" ColumnName="COD" />
+          <ScalarProperty Name="NH3N" ColumnName="NH3N" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="B_ID" ColumnName="B_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/18/2016 14:00:50" ReportInfo.Modified="01/23/2019 13:20:54" ReportInfo.CreatorVersion="2014.4.8.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+      Timee.Value =Convert.ToDateTime (DateTime .Now.ToString()) ;
+    }
+
+  
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqHwzMSgwTFaHpjtG3vsOj8dv5gGMT67nk4qPHf1zZ5y/3ddBBEcWGs4qACejiaZO3aJ0R9oaOGHZgZ1cwm42M5770YO27Ob8MqrVfvudBf1BSLKQOAQu2/9xpVC7nq1mgXXbXKqiMNr2/HRWZtMp4iIzRkRJEhEDHjTBqaR6j+NTvXc981pOQaR2deWDj1OiY">
+      <TableDataSource Name="Table" DataType="System.Int32" Enabled="true" SelectCommand="select * from XinJinRiBaoBiao&#13;&#10;where convert(char(10),Timee,120) = @Parameter&#13;&#10;order by Timee">
+        <Column Name="Timee" DataType="System.DateTime"/>
+        <Column Name="GeShanQianYeWei" DataType="System.Double"/>
+        <Column Name="GeShanHouYeWei" DataType="System.Double"/>
+        <Column Name="1#liuLiang" DataType="System.Double"/>
+        <Column Name="2#liuLiang" DataType="System.Double"/>
+        <Column Name="3#liuLiang" DataType="System.Double"/>
+        <Column Name="4#liuLiang" DataType="System.Double"/>
+        <Column Name="1#LeiJiliuLiang" DataType="System.Double"/>
+        <Column Name="2#LeiJiliuLiang" DataType="System.Double"/>
+        <Column Name="3#LeiJiliuLiang" DataType="System.Double"/>
+        <Column Name="4#LeiJiliuLiang" DataType="System.Double"/>
+        <Column Name="PH" DataType="System.Double"/>
+        <Column Name="COD" DataType="System.Double"/>
+        <Column Name="NH3N" DataType="System.Double"/>
+        <Column Name="TP" DataType="System.Double"/>
+        <Column Name="H2S_1" DataType="System.Double"/>
+        <Column Name="H2S_2" DataType="System.Double"/>
+        <CommandParameter Name="Parameter" DataType="22" Expression="Format(&quot;{0:yyyy-MM-dd}&quot;,Timee.Value)"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Total Name="Total" TotalType="Avg" Expression="[Table.GeShanQianYeWei]" Evaluator="Data1"/>
+    <Total Name="Total1" TotalType="Avg" Expression="[Table.GeShanHouYeWei]" Evaluator="Data1"/>
+    <Total Name="Total2" TotalType="Avg" Expression="[Table.H2S_1]" Evaluator="Data1"/>
+    <Total Name="Total3" TotalType="Avg" Expression="[Table.H2S_2]" Evaluator="Data1"/>
+    <Total Name="Total4" TotalType="Avg" Expression="[Table.PH]" Evaluator="Data1"/>
+    <Total Name="Total5" TotalType="Avg" Expression="[Table.COD]" Evaluator="Data1"/>
+    <Total Name="Total6" TotalType="Avg" Expression="[Table.NH3N]" Evaluator="Data1"/>
+    <Total Name="Total7" TotalType="Avg" Expression="[Table.TP]" Evaluator="Data1"/>
+  </Dictionary>
+  <DialogPage Name="Form1" Width="230" Height="146" AcceptButton="btnOk" CancelButton="btnCancel" LoadEvent="Form1_Load">
+    <ButtonControl Name="btnOk" Left="42" Top="79" Anchor="Bottom, Right" Font="宋体, 9pt" TabIndex="0" Text="OK" DialogResult="OK"/>
+    <ButtonControl Name="btnCancel" Left="125" Top="79" Anchor="Bottom, Right" Font="宋体, 9pt" TabIndex="1" Text="Cancel" DialogResult="Cancel"/>
+    <DateTimePickerControl Name="Timee" Left="68" Top="44" Width="128" Font="宋体, 9pt" TabIndex="2" Text="2016年5月18日" Value="05/18/2016 14:01:29"/>
+    <LabelControl Name="Label1" Left="8" Top="48" Width="53" Height="12" Font="宋体, 9pt" TabIndex="3" Text="日期时间"/>
+    <LabelControl Name="Label2" Left="64" Top="16" Width="101" Height="12" Font="宋体, 9pt" TabIndex="4" Text="新金路运行日报表" ClickEvent="Label2_Click"/>
+  </DialogPage>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="8" FirstPageSource="15" OtherPagesSource="15" Guides="514.5,1036.1,1081.25,1270.25,986.85,1081.35,62.75,280.1,374.6,469.1,563.6,658.1,847.1,922.7,998.3,752.6,1149.5,1225.1,1300.7,1073.9,1376.3,1451.9,279.84,1451.64,1223.1,1317.6,1109.7,1204.2">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="113.4" Guides="18.9,75.6,113.4,151.2,141.75,141.75,141.75,141.75,567">
+      <TextObject Name="Text1" Left="344.4" Top="28.35" Width="358.95" Height="56.7" Text="新金路运行日报表" Font="宋体, 28pt"/>
+      <TextObject Name="Text8" Left="934.2" Top="75.6" Width="155.5" Height="28.35" Text="[Format(&quot;{0:yyyy-MM-dd}&quot;,[Table.Timee])]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text22" Left="904.9" Top="75.6" Width="63.05" Height="28.35" Text="日期：" HorzAlign="Right" VertAlign="Bottom" Font="宋体, 11pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="117.4" Width="1047.06" Height="66.15">
+      <TextObject Name="Text2" Left="15.5" Top="1.89" Width="113.4" Height="64.26" Border.Lines="All" Text="时间" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text3" Left="128.9" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;格栅前液位&#13;&#10;(M)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text4" Left="204.5" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;格栅后液位&#13;&#10;(M)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text5" Left="280.1" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;1#累积流量&#13;&#10;(M3)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text6" Left="355.7" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;2#累积流量&#13;&#10;(M3)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text34" Left="431.3" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;3#累积流量&#13;&#10;(M3)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text35" Left="506.9" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;4#累积流量&#13;&#10;(M3)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text24" Left="582.5" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;1#H2S&#13;&#10;(PPM)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text63" Left="658.1" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;2#H2S&#13;&#10;(PPM)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text64" Left="733.7" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="PH&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text42" Left="809.3" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;COD&#13;&#10;(mg/L)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text43" Left="884.9" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;NH3N&#13;&#10;(mg/L)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+      <TextObject Name="Text69" Left="960.5" Top="1.89" Width="75.6" Height="64.26" Border.Lines="All" Text="&#13;&#10;TP&#13;&#10;(mg/L)" HorzAlign="Center" VertAlign="Center" Font="宋体, 11.25pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="187.55" Width="1047.06" Height="28.35" Guides="0,28.35" DataSource="Table">
+      <TextObject Name="Text13" Left="128.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.GeShanQianYeWei]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text9" Left="15.5" Width="113.4" Height="28.35" Border.Lines="All" Text="[Format(&quot;{0:HH:mm:ss}&quot;,[Table.Timee])]&#13;&#10;" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text10" Left="204.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.GeShanHouYeWei]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text11" Left="280.1" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.1#LeiJiliuLiang]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text12" Left="355.7" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.2#LeiJiliuLiang]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text27" Left="582.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.H2S_1]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text36" Left="431.3" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.3#LeiJiliuLiang]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text37" Left="506.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.4#LeiJiliuLiang]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text61" Left="809.3" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.COD]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text62" Left="884.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.NH3N]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text66" Left="658.1" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.H2S_2]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text65" Left="733.7" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.PH]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text71" Left="960.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Table.TP]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="219.9" Width="1047.06" Height="198.45" Guides="0,28.35,198.45">
+      <TextObject Name="Text14" Left="15.5" Width="113.4" Height="28.35" Border.Lines="All" Text="平均值：" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text15" Left="128.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text16" Left="204.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total1]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text19" Left="15.5" Top="28.35" Width="113.4" Height="170.1" Border.Lines="All" Text="备注：" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text20" Left="128.9" Top="28.35" Width="907.2" Height="170.1" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text29" Left="280.1" Width="75.6" Height="28.35" Border.Lines="All" Text="*" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text30" Left="355.7" Width="75.6" Height="28.35" Border.Lines="All" Text="*" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text32" Left="582.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total2]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text39" Left="506.9" Width="75.6" Height="28.35" Border.Lines="All" Text="*" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text38" Left="431.3" Width="75.6" Height="28.35" Border.Lines="All" Text="*" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text58" Left="809.3" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total5]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text59" Left="884.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total6]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text67" Left="658.1" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total3]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text68" Left="733.7" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total4]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text73" Left="960.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[Total7]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 11pt" Trimming="EllipsisCharacter"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="422.35" Width="1047.06" Height="37.8" Guides="0,28.35">
+      <TextObject Name="Text7" Left="990.85" Width="62.15" Height="28.35" Text="[Page]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text74" Left="72.2" Top="9.45" Width="189" Height="28.35" Text="[Date]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text75" Left="-22.2" Top="9.45" Width="94.5" Height="28.35" Text="制表时间：" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

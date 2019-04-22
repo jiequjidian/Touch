@@ -1,0 +1,37 @@
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\websocket-server(form).exe.config
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\websocket-server(form).exe
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\websocket-server(form).pdb
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\Newtonsoft.Json.dll
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\websocket-sharp.dll
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\Newtonsoft.Json.pdb
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\Newtonsoft.Json.xml
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\bin\Release\websocket-sharp.xml
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).csprojAssemblyReference.cache
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket_server_form_.Form1.resources
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket_server_form_.Properties.Resources.resources
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).csproj.GenerateResource.cache
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).csproj.CoreCompileInputs.cache
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).csproj.CopyComplete
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).exe
+D:\VS\公司项目-已完成\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).pdb
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\websocket-server(form).exe.config
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\websocket-server(form).exe
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\websocket-server(form).pdb
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\EntityFramework.dll
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\EntityFramework.SqlServer.dll
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\Newtonsoft.Json.dll
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\websocket-sharp.dll
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\EntityFramework.xml
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\EntityFramework.SqlServer.xml
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\Newtonsoft.Json.pdb
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\Newtonsoft.Json.xml
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\websocket-sharp.xml
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket_server_form_.Form1.resources
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket_server_form_.Properties.Resources.resources
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).csproj.GenerateResource.cache
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).csproj.CoreCompileInputs.cache
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).csproj.CopyComplete
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).exe
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).pdb
+D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Release\websocket-server(form).csprojAssemblyReference.cache

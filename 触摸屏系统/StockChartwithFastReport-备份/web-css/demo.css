@@ -1,0 +1,39 @@
+﻿ul.ztree
+{
+    width:108%;
+    height:250px;
+    margin-top: 10px;
+    border: 0px;
+    background: #f2f2f2;
+}
+ul.ztree li
+{
+      line-height: 20px;
+}
+.hr-divide {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px dotted #B8B8B8;
+}
+.divide
+{
+  height: 15px;
+  margin: 10px 0px 5px;
+  line-height: 15px;
+  background: url(img/locationBg.gif) center repeat-x;
+}
+.tit {
+  display: block;
+  background: #f2f2f2;
+  padding-right: 5px;
+  float: left;
+  font-size:9px;
+}
+.active{border-bottom: #000000 2px solid;}
+.span-label{font-size:9px;}
+.button{  height: 30px;font-size: 14px; width:100%; margin-bottom:10px;  padding: 0 0px;}
+.button-raised {line-height:26px;}
+.footer{ background:url(../web-css/img/locationBg.gif); margin-top: 15px; height:8px;  text-align: center;  padding-top: 10px;
+  }
+.footer .container{ }

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f94196049ca4c4a9647d66bc978305a" Name="Diagram1" ZoomLevel="106">
+        <EntityTypeShape EntityType="QPCHARTModel.Menu" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.SysUser" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.好氧1_NH3N" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.好氧2_NH3N" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.好氧3_DO" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.好氧4_DO" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.后缺氧1_MLSS" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.后缺氧2_MLSS" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.前缺氧1_DO" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.前缺氧2_DO" Width="1.5" PointX="4.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
