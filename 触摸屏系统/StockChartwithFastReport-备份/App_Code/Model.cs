@@ -30,58 +30,89 @@ public partial class SysUser
     public Nullable<int> Level { get; set; }
 }
 
-public partial class 好氧1_NH3N
+public partial class 华青路
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
-    public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 好氧2_NH3N
+public partial class 通波塘
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 好氧3_DO
+public partial class 新区路
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 好氧4_DO
+public partial class 新业路
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 后缺氧1_MLSS
+public partial class 赵巷A
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 后缺氧2_MLSS
+public partial class 赵巷B
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 前缺氧1_DO
+public partial class 赵巷C
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }
 
-public partial class 前缺氧2_DO
+public partial class 赵重路
 {
     public System.DateTime DateTime { get; set; }
     public double Val { get; set; }
     public string Ann { get; set; }
+    public Nullable<double> PH { get; set; }
+    public Nullable<double> 前液位 { get; set; }
+    public Nullable<double> 后液位 { get; set; }
+    public Nullable<double> 瞬时流量 { get; set; }
 }

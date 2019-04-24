@@ -100,130 +100,130 @@ namespace QPCHARTModel
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<好氧1_NH3N> 好氧1_NH3N
+        public ObjectSet<华青路> 华青路
         {
             get
             {
-                if ((_好氧1_NH3N == null))
+                if ((_华青路 == null))
                 {
-                    _好氧1_NH3N = base.CreateObjectSet<好氧1_NH3N>("好氧1_NH3N");
+                    _华青路 = base.CreateObjectSet<华青路>("华青路");
                 }
-                return _好氧1_NH3N;
+                return _华青路;
             }
         }
-        private ObjectSet<好氧1_NH3N> _好氧1_NH3N;
+        private ObjectSet<华青路> _华青路;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<好氧2_NH3N> 好氧2_NH3N
+        public ObjectSet<通波塘> 通波塘
         {
             get
             {
-                if ((_好氧2_NH3N == null))
+                if ((_通波塘 == null))
                 {
-                    _好氧2_NH3N = base.CreateObjectSet<好氧2_NH3N>("好氧2_NH3N");
+                    _通波塘 = base.CreateObjectSet<通波塘>("通波塘");
                 }
-                return _好氧2_NH3N;
+                return _通波塘;
             }
         }
-        private ObjectSet<好氧2_NH3N> _好氧2_NH3N;
+        private ObjectSet<通波塘> _通波塘;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<好氧3_DO> 好氧3_DO
+        public ObjectSet<新区路> 新区路
         {
             get
             {
-                if ((_好氧3_DO == null))
+                if ((_新区路 == null))
                 {
-                    _好氧3_DO = base.CreateObjectSet<好氧3_DO>("好氧3_DO");
+                    _新区路 = base.CreateObjectSet<新区路>("新区路");
                 }
-                return _好氧3_DO;
+                return _新区路;
             }
         }
-        private ObjectSet<好氧3_DO> _好氧3_DO;
+        private ObjectSet<新区路> _新区路;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<好氧4_DO> 好氧4_DO
+        public ObjectSet<新业路> 新业路
         {
             get
             {
-                if ((_好氧4_DO == null))
+                if ((_新业路 == null))
                 {
-                    _好氧4_DO = base.CreateObjectSet<好氧4_DO>("好氧4_DO");
+                    _新业路 = base.CreateObjectSet<新业路>("新业路");
                 }
-                return _好氧4_DO;
+                return _新业路;
             }
         }
-        private ObjectSet<好氧4_DO> _好氧4_DO;
+        private ObjectSet<新业路> _新业路;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<后缺氧1_MLSS> 后缺氧1_MLSS
+        public ObjectSet<赵巷A> 赵巷A
         {
             get
             {
-                if ((_后缺氧1_MLSS == null))
+                if ((_赵巷A == null))
                 {
-                    _后缺氧1_MLSS = base.CreateObjectSet<后缺氧1_MLSS>("后缺氧1_MLSS");
+                    _赵巷A = base.CreateObjectSet<赵巷A>("赵巷A");
                 }
-                return _后缺氧1_MLSS;
+                return _赵巷A;
             }
         }
-        private ObjectSet<后缺氧1_MLSS> _后缺氧1_MLSS;
+        private ObjectSet<赵巷A> _赵巷A;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<后缺氧2_MLSS> 后缺氧2_MLSS
+        public ObjectSet<赵巷B> 赵巷B
         {
             get
             {
-                if ((_后缺氧2_MLSS == null))
+                if ((_赵巷B == null))
                 {
-                    _后缺氧2_MLSS = base.CreateObjectSet<后缺氧2_MLSS>("后缺氧2_MLSS");
+                    _赵巷B = base.CreateObjectSet<赵巷B>("赵巷B");
                 }
-                return _后缺氧2_MLSS;
+                return _赵巷B;
             }
         }
-        private ObjectSet<后缺氧2_MLSS> _后缺氧2_MLSS;
+        private ObjectSet<赵巷B> _赵巷B;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<前缺氧1_DO> 前缺氧1_DO
+        public ObjectSet<赵巷C> 赵巷C
         {
             get
             {
-                if ((_前缺氧1_DO == null))
+                if ((_赵巷C == null))
                 {
-                    _前缺氧1_DO = base.CreateObjectSet<前缺氧1_DO>("前缺氧1_DO");
+                    _赵巷C = base.CreateObjectSet<赵巷C>("赵巷C");
                 }
-                return _前缺氧1_DO;
+                return _赵巷C;
             }
         }
-        private ObjectSet<前缺氧1_DO> _前缺氧1_DO;
+        private ObjectSet<赵巷C> _赵巷C;
     
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        public ObjectSet<前缺氧2_DO> 前缺氧2_DO
+        public ObjectSet<赵重路> 赵重路
         {
             get
             {
-                if ((_前缺氧2_DO == null))
+                if ((_赵重路 == null))
                 {
-                    _前缺氧2_DO = base.CreateObjectSet<前缺氧2_DO>("前缺氧2_DO");
+                    _赵重路 = base.CreateObjectSet<赵重路>("赵重路");
                 }
-                return _前缺氧2_DO;
+                return _赵重路;
             }
         }
-        private ObjectSet<前缺氧2_DO> _前缺氧2_DO;
+        private ObjectSet<赵重路> _赵重路;
 
         #endregion
 
@@ -246,67 +246,67 @@ namespace QPCHARTModel
         }
     
         /// <summary>
-        /// 用于向 好氧1_NH3N EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 华青路 EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo好氧1_NH3N(好氧1_NH3N 好氧1_NH3N)
+        public void AddTo华青路(华青路 华青路)
         {
-            base.AddObject("好氧1_NH3N", 好氧1_NH3N);
+            base.AddObject("华青路", 华青路);
         }
     
         /// <summary>
-        /// 用于向 好氧2_NH3N EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 通波塘 EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo好氧2_NH3N(好氧2_NH3N 好氧2_NH3N)
+        public void AddTo通波塘(通波塘 通波塘)
         {
-            base.AddObject("好氧2_NH3N", 好氧2_NH3N);
+            base.AddObject("通波塘", 通波塘);
         }
     
         /// <summary>
-        /// 用于向 好氧3_DO EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 新区路 EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo好氧3_DO(好氧3_DO 好氧3_DO)
+        public void AddTo新区路(新区路 新区路)
         {
-            base.AddObject("好氧3_DO", 好氧3_DO);
+            base.AddObject("新区路", 新区路);
         }
     
         /// <summary>
-        /// 用于向 好氧4_DO EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 新业路 EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo好氧4_DO(好氧4_DO 好氧4_DO)
+        public void AddTo新业路(新业路 新业路)
         {
-            base.AddObject("好氧4_DO", 好氧4_DO);
+            base.AddObject("新业路", 新业路);
         }
     
         /// <summary>
-        /// 用于向 后缺氧1_MLSS EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 赵巷A EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo后缺氧1_MLSS(后缺氧1_MLSS 后缺氧1_MLSS)
+        public void AddTo赵巷A(赵巷A 赵巷A)
         {
-            base.AddObject("后缺氧1_MLSS", 后缺氧1_MLSS);
+            base.AddObject("赵巷A", 赵巷A);
         }
     
         /// <summary>
-        /// 用于向 后缺氧2_MLSS EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 赵巷B EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo后缺氧2_MLSS(后缺氧2_MLSS 后缺氧2_MLSS)
+        public void AddTo赵巷B(赵巷B 赵巷B)
         {
-            base.AddObject("后缺氧2_MLSS", 后缺氧2_MLSS);
+            base.AddObject("赵巷B", 赵巷B);
         }
     
         /// <summary>
-        /// 用于向 前缺氧1_DO EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 赵巷C EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo前缺氧1_DO(前缺氧1_DO 前缺氧1_DO)
+        public void AddTo赵巷C(赵巷C 赵巷C)
         {
-            base.AddObject("前缺氧1_DO", 前缺氧1_DO);
+            base.AddObject("赵巷C", 赵巷C);
         }
     
         /// <summary>
-        /// 用于向 前缺氧2_DO EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// 用于向 赵重路 EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
         /// </summary>
-        public void AddTo前缺氧2_DO(前缺氧2_DO 前缺氧2_DO)
+        public void AddTo赵重路(赵重路 赵重路)
         {
-            base.AddObject("前缺氧2_DO", 前缺氧2_DO);
+            base.AddObject("赵重路", 赵重路);
         }
 
         #endregion
@@ -678,24 +678,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="好氧1_NH3N")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="华青路")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 好氧1_NH3N : EntityObject
+    public partial class 华青路 : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 好氧1_NH3N 对象。
+        /// 创建新的 华青路 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 好氧1_NH3N Create好氧1_NH3N(global::System.DateTime dateTime, global::System.Double val)
+        public static 华青路 Create华青路(global::System.DateTime dateTime, global::System.Double val)
         {
-            好氧1_NH3N 好氧1_NH3N = new 好氧1_NH3N();
-            好氧1_NH3N.DateTime = dateTime;
-            好氧1_NH3N.Val = val;
-            return 好氧1_NH3N;
+            华青路 华青路 = new 华青路();
+            华青路.DateTime = dateTime;
+            华青路.Val = val;
+            return 华青路;
         }
 
         #endregion
@@ -758,24 +758,96 @@ namespace QPCHARTModel
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Ann
+        public Nullable<global::System.Double> PH
         {
             get
             {
-                return _Ann;
+                return _PH;
             }
             set
             {
-                OnAnnChanging(value);
-                ReportPropertyChanging("Ann");
-                _Ann = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Ann");
-                OnAnnChanged();
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
             }
         }
-        private global::System.String _Ann;
-        partial void OnAnnChanging(global::System.String value);
-        partial void OnAnnChanged();
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -785,24 +857,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="好氧2_NH3N")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="通波塘")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 好氧2_NH3N : EntityObject
+    public partial class 通波塘 : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 好氧2_NH3N 对象。
+        /// 创建新的 通波塘 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 好氧2_NH3N Create好氧2_NH3N(global::System.DateTime dateTime, global::System.Double val)
+        public static 通波塘 Create通波塘(global::System.DateTime dateTime, global::System.Double val)
         {
-            好氧2_NH3N 好氧2_NH3N = new 好氧2_NH3N();
-            好氧2_NH3N.DateTime = dateTime;
-            好氧2_NH3N.Val = val;
-            return 好氧2_NH3N;
+            通波塘 通波塘 = new 通波塘();
+            通波塘.DateTime = dateTime;
+            通波塘.Val = val;
+            return 通波塘;
         }
 
         #endregion
@@ -883,6 +955,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -892,24 +1060,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="好氧3_DO")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="新区路")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 好氧3_DO : EntityObject
+    public partial class 新区路 : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 好氧3_DO 对象。
+        /// 创建新的 新区路 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 好氧3_DO Create好氧3_DO(global::System.DateTime dateTime, global::System.Double val)
+        public static 新区路 Create新区路(global::System.DateTime dateTime, global::System.Double val)
         {
-            好氧3_DO 好氧3_DO = new 好氧3_DO();
-            好氧3_DO.DateTime = dateTime;
-            好氧3_DO.Val = val;
-            return 好氧3_DO;
+            新区路 新区路 = new 新区路();
+            新区路.DateTime = dateTime;
+            新区路.Val = val;
+            return 新区路;
         }
 
         #endregion
@@ -990,6 +1158,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -999,24 +1263,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="好氧4_DO")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="新业路")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 好氧4_DO : EntityObject
+    public partial class 新业路 : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 好氧4_DO 对象。
+        /// 创建新的 新业路 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 好氧4_DO Create好氧4_DO(global::System.DateTime dateTime, global::System.Double val)
+        public static 新业路 Create新业路(global::System.DateTime dateTime, global::System.Double val)
         {
-            好氧4_DO 好氧4_DO = new 好氧4_DO();
-            好氧4_DO.DateTime = dateTime;
-            好氧4_DO.Val = val;
-            return 好氧4_DO;
+            新业路 新业路 = new 新业路();
+            新业路.DateTime = dateTime;
+            新业路.Val = val;
+            return 新业路;
         }
 
         #endregion
@@ -1097,6 +1361,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -1106,24 +1466,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="后缺氧1_MLSS")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="赵巷A")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 后缺氧1_MLSS : EntityObject
+    public partial class 赵巷A : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 后缺氧1_MLSS 对象。
+        /// 创建新的 赵巷A 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 后缺氧1_MLSS Create后缺氧1_MLSS(global::System.DateTime dateTime, global::System.Double val)
+        public static 赵巷A Create赵巷A(global::System.DateTime dateTime, global::System.Double val)
         {
-            后缺氧1_MLSS 后缺氧1_MLSS = new 后缺氧1_MLSS();
-            后缺氧1_MLSS.DateTime = dateTime;
-            后缺氧1_MLSS.Val = val;
-            return 后缺氧1_MLSS;
+            赵巷A 赵巷A = new 赵巷A();
+            赵巷A.DateTime = dateTime;
+            赵巷A.Val = val;
+            return 赵巷A;
         }
 
         #endregion
@@ -1204,6 +1564,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -1213,24 +1669,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="后缺氧2_MLSS")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="赵巷B")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 后缺氧2_MLSS : EntityObject
+    public partial class 赵巷B : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 后缺氧2_MLSS 对象。
+        /// 创建新的 赵巷B 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 后缺氧2_MLSS Create后缺氧2_MLSS(global::System.DateTime dateTime, global::System.Double val)
+        public static 赵巷B Create赵巷B(global::System.DateTime dateTime, global::System.Double val)
         {
-            后缺氧2_MLSS 后缺氧2_MLSS = new 后缺氧2_MLSS();
-            后缺氧2_MLSS.DateTime = dateTime;
-            后缺氧2_MLSS.Val = val;
-            return 后缺氧2_MLSS;
+            赵巷B 赵巷B = new 赵巷B();
+            赵巷B.DateTime = dateTime;
+            赵巷B.Val = val;
+            return 赵巷B;
         }
 
         #endregion
@@ -1311,6 +1767,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -1320,24 +1872,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="前缺氧1_DO")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="赵巷C")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 前缺氧1_DO : EntityObject
+    public partial class 赵巷C : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 前缺氧1_DO 对象。
+        /// 创建新的 赵巷C 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 前缺氧1_DO Create前缺氧1_DO(global::System.DateTime dateTime, global::System.Double val)
+        public static 赵巷C Create赵巷C(global::System.DateTime dateTime, global::System.Double val)
         {
-            前缺氧1_DO 前缺氧1_DO = new 前缺氧1_DO();
-            前缺氧1_DO.DateTime = dateTime;
-            前缺氧1_DO.Val = val;
-            return 前缺氧1_DO;
+            赵巷C 赵巷C = new 赵巷C();
+            赵巷C.DateTime = dateTime;
+            赵巷C.Val = val;
+            return 赵巷C;
         }
 
         #endregion
@@ -1418,6 +1970,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 
@@ -1427,24 +2075,24 @@ namespace QPCHARTModel
     /// <summary>
     /// 没有元数据文档可用。
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="前缺氧2_DO")]
+    [EdmEntityTypeAttribute(NamespaceName="QPCHARTModel", Name="赵重路")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class 前缺氧2_DO : EntityObject
+    public partial class 赵重路 : EntityObject
     {
         #region 工厂方法
     
         /// <summary>
-        /// 创建新的 前缺氧2_DO 对象。
+        /// 创建新的 赵重路 对象。
         /// </summary>
         /// <param name="dateTime">DateTime 属性的初始值。</param>
         /// <param name="val">Val 属性的初始值。</param>
-        public static 前缺氧2_DO Create前缺氧2_DO(global::System.DateTime dateTime, global::System.Double val)
+        public static 赵重路 Create赵重路(global::System.DateTime dateTime, global::System.Double val)
         {
-            前缺氧2_DO 前缺氧2_DO = new 前缺氧2_DO();
-            前缺氧2_DO.DateTime = dateTime;
-            前缺氧2_DO.Val = val;
-            return 前缺氧2_DO;
+            赵重路 赵重路 = new 赵重路();
+            赵重路.DateTime = dateTime;
+            赵重路.Val = val;
+            return 赵重路;
         }
 
         #endregion
@@ -1525,6 +2173,102 @@ namespace QPCHARTModel
         private global::System.String _Ann;
         partial void OnAnnChanging(global::System.String value);
         partial void OnAnnChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PH
+        {
+            get
+            {
+                return _PH;
+            }
+            set
+            {
+                OnPHChanging(value);
+                ReportPropertyChanging("PH");
+                _PH = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PH");
+                OnPHChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PH;
+        partial void OnPHChanging(Nullable<global::System.Double> value);
+        partial void OnPHChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 前液位
+        {
+            get
+            {
+                return _前液位;
+            }
+            set
+            {
+                On前液位Changing(value);
+                ReportPropertyChanging("前液位");
+                _前液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("前液位");
+                On前液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _前液位;
+        partial void On前液位Changing(Nullable<global::System.Double> value);
+        partial void On前液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 后液位
+        {
+            get
+            {
+                return _后液位;
+            }
+            set
+            {
+                On后液位Changing(value);
+                ReportPropertyChanging("后液位");
+                _后液位 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("后液位");
+                On后液位Changed();
+            }
+        }
+        private Nullable<global::System.Double> _后液位;
+        partial void On后液位Changing(Nullable<global::System.Double> value);
+        partial void On后液位Changed();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> 瞬时流量
+        {
+            get
+            {
+                return _瞬时流量;
+            }
+            set
+            {
+                On瞬时流量Changing(value);
+                ReportPropertyChanging("瞬时流量");
+                _瞬时流量 = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("瞬时流量");
+                On瞬时流量Changed();
+            }
+        }
+        private Nullable<global::System.Double> _瞬时流量;
+        partial void On瞬时流量Changing(Nullable<global::System.Double> value);
+        partial void On瞬时流量Changed();
 
         #endregion
 

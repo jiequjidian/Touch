@@ -6,6 +6,22 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
+
+
+public static class serializerS
+{//利用序列化和反序列化来进行深拷贝
+    public static Menu CloneJson<Menu>(this Menu source)
+    {
+        if (Object.ReferenceEquals(source, null))
+        {
+            return default(Menu);
+        }
+
+        var deserializeSettings = new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace };
+        return JsonConvert.DeserializeObject<Menu>(JsonConvert.SerializeObject(source), deserializeSettings);
+    }
+}
 
 /// <summary>
 /// 该类主要处理web页面通过ajax请求
@@ -17,6 +33,8 @@ public partial class Server_IndexDo : System.Web.UI.Page
 
     }
 
+
+  
     #region 该类功能描述
     /**
      * 该类主要处理web页面通过ajax请求
@@ -29,6 +47,8 @@ public partial class Server_IndexDo : System.Web.UI.Page
     [WebMethod]
     public static List<Menu> GetMenu()
     {
+       
+
         try
         {
             using (QPCHARTEntities sce = new QPCHARTEntities())
@@ -37,20 +57,36 @@ public partial class Server_IndexDo : System.Web.UI.Page
                 
                 List<Menu> list = sce.Database.SqlQuery<Menu>(Sql).ToList();
                 List<Menu> result = new List<Menu>();
-                foreach(var item in list)
+                int i;
+                int bengNum = 0;
+                
+                foreach (var item in list)
                 {
                     if(item.pId==0)
                     {
+                        bengNum++;
                         result.Add(item);
                         continue;
                     }
-                    Sql = @"select Val from " + item.name + " where Val<>0";
-                    result.Add(item);
+                    
+                    //Sql = @"select Val from " + item.name + "where Val<>0";                   
+                    for (i = 0; i < 13; i++)
+                    {
+                        Menu itemChid = new Menu();
+                        
+                        itemChid = item.CloneJson<Menu>();
+                        //itemChid.name += i.ToString();
+                        //itemChid.id += 1;
+                        itemChid.pId = i+1;
+                        result.Add(itemChid);
+
+                    }
                     //if (sce.Database.SqlQuery<double>(Sql).ToList().Count != 0)
                     //{
                     //    result.Add(item);
                     //}
                 }
+                
                 return result;
                 //return sce.Database.SqlQuery<Menu>(Sql).ToList();
                 //return sce.Menu.ToList();

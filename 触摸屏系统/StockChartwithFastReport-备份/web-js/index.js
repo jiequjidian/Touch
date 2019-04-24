@@ -8,7 +8,10 @@
         beforeSend: function () { loading(); },
         success: function (data) {
             var zNodes = data.d;
-            alert(zNodes);
+            for (let a in zNodes) {
+                console.log("getmenu result:" + JSON.stringify(zNodes[a]));
+            }
+            
             if (zNodes != null)
                 
                 $.fn.zTree.init($("#treeDemo"), setting, zNodes);
@@ -55,7 +58,8 @@ var getStockData = function () {
                     var a = new Array();
                     e.DateTime = e.DateTime.toString();
                     a.push(e.DateTime.substring(e.DateTime.indexOf('(') + 1, e.DateTime.indexOf(')')) * 1 + getTime8h); //获取数字时间戳
-                    a.push (e.Val);
+                    a.push(e.Val);
+                   // console.log("a:"+a);
                     new_data.push(a);
                 });
                 seriesOptions[i] = {

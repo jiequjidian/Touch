@@ -25,12 +25,12 @@ public partial class QPCHARTEntities : DbContext
 
     public DbSet<Menu> Menu { get; set; }
     public DbSet<SysUser> SysUser { get; set; }
-    public DbSet<好氧1_NH3N> 好氧1_NH3N { get; set; }
-    public DbSet<好氧2_NH3N> 好氧2_NH3N { get; set; }
-    public DbSet<好氧3_DO> 好氧3_DO { get; set; }
-    public DbSet<好氧4_DO> 好氧4_DO { get; set; }
-    public DbSet<后缺氧1_MLSS> 后缺氧1_MLSS { get; set; }
-    public DbSet<后缺氧2_MLSS> 后缺氧2_MLSS { get; set; }
-    public DbSet<前缺氧1_DO> 前缺氧1_DO { get; set; }
-    public DbSet<前缺氧2_DO> 前缺氧2_DO { get; set; }
+    public DbSet<华青路> 华青路 { get; set; }
+    public DbSet<通波塘> 通波塘 { get; set; }
+    public DbSet<新区路> 新区路 { get; set; }
+    public DbSet<新业路> 新业路 { get; set; }
+    public DbSet<赵巷A> 赵巷A { get; set; }
+    public DbSet<赵巷B> 赵巷B { get; set; }
+    public DbSet<赵巷C> 赵巷C { get; set; }
+    public DbSet<赵重路> 赵重路 { get; set; }
 }

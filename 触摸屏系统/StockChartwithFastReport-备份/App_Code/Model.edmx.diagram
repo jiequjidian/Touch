@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2f94196049ca4c4a9647d66bc978305a" Name="Diagram1" ZoomLevel="106">
-        <EntityTypeShape EntityType="QPCHARTModel.Menu" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.SysUser" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.好氧1_NH3N" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.好氧2_NH3N" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.好氧3_DO" Width="1.5" PointX="4.75" PointY="3.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.好氧4_DO" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.后缺氧1_MLSS" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.后缺氧2_MLSS" Width="1.5" PointX="2.75" PointY="6.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.前缺氧1_DO" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="QPCHARTModel.前缺氧2_DO" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.Menu" Width="1.5" PointX="0.625" PointY="0.5" />
+        <EntityTypeShape EntityType="QPCHARTModel.SysUser" Width="1.5" PointX="2.25" PointY="0.5" />
+        <EntityTypeShape EntityType="QPCHARTModel.华青路" Width="1.5" PointX="2.5" PointY="3.625" />
+        <EntityTypeShape EntityType="QPCHARTModel.通波塘" Width="1.5" PointX="4.375" PointY="3.625" />
+        <EntityTypeShape EntityType="QPCHARTModel.新区路" Width="1.5" PointX="6.25" PointY="3.625" />
+        <EntityTypeShape EntityType="QPCHARTModel.新业路" Width="1.5" PointX="8.25" PointY="3.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.赵巷A" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.赵巷B" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.赵巷C" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="QPCHARTModel.赵重路" Width="1.5" PointX="0.5" PointY="3.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
