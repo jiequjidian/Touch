@@ -2,6 +2,7 @@
 //配置需要显示的表名
 var old_names = ['进水COD值', '进水NH3N值', '进水PH值', '三期1#DO', '三期2#DO', '三期3#DO', '三期4#DO', '三期MLSS', '三期出水COD值', '三期出水NH3N值', '三期出水PH值', '三期出水TN值', '三期出水TP值', '三期出水流量', '三期储泥池1#泥位', '三期储泥池2#泥位', '三期格栅后液位', '三期格栅前液位', '三期进水流量', '三期配水井液位', '三期脱水污泥流量', '一期1#DO', '一期1#MLSS', '一期1#剩余泵流量', '一期2#DO', ' 一期2#MLSS', ' 一期2#剩余泵流量', '一期3#DO', ' 一期4#DO', '一期5#DO', '一期6#DO', '一期出水COD值', '一期出水NH3N值', '一期出水PH值', '一期出水TN值', '一期出水TP值', '一期出水流量', '一期格栅后液位', '一期格栅前液位', '一期进水流量'];
 var names = [];
+var nameParents = [];
 var layerTitle = logoText = "综合分析监控信息平台";
 var opExceptionText = "执行操作时超时或出错，请稍后再试.";
 var AnnAddMsg = '注解已添加！';
@@ -39,12 +40,18 @@ function beforeClick(treeId, treeNode) {
 function onCheck(e, treeId, treeNode) {
     var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
 			nodes = zTree.getCheckedNodes(true),
-			v = "";
+        v = "";
+    u = "";
     for (var i = 0, l = nodes.length; i < l; i++) {
         v += nodes[i].name + ",";
+        u += nodes[i].getParentNode().name + ",";
     }
-    if (v.length > 0) v = v.substring(0, v.length - 1);
-    filterMenu(v.split(','));
+    if (v.length > 0) {
+        v = v.substring(0, v.length - 1);//子节点
+        u = u.substring(0, u.length - 1);//父节点
+    }
+    var nameSum = [[v.split(',')], [u.split(',')]];
+    filterMenu(nameSum);
 }
 var editAnnTime = null;
 var tbName = null;

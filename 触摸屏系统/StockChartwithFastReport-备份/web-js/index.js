@@ -7,10 +7,7 @@
         dataType: "json",
         beforeSend: function () { loading(); },
         success: function (data) {
-            var zNodes = data.d;
-            for (let a in zNodes) {
-                console.log("getmenu result:" + JSON.stringify(zNodes[a]));
-            }
+            var zNodes = data.d;          
             
             if (zNodes != null)
                 
@@ -32,7 +29,10 @@
 //过滤菜单中没有勾选项并重新绘制图表
 var filterMenu = function (v) {
     //names = arrayIntersection(v, old_names);
-    names = v;
+    names = v[0];
+    nameParents = v[1];
+    console.log("names:" + names);
+    console.log("names:" + names);
     if (!isEmpty(names)) {
         getStockData();
     }
@@ -49,22 +49,26 @@ var getStockData = function () {
             url: "../Server/IndexDo.aspx/GetData",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            data: '{"tb":"' + name + '","start_time":"' + start_time + '","end_time":"' + end_time + '"}',
+            data: '{"tb":"' + nameParents[i] + '","tg":"' + name+ '","start_time":"' + start_time + '","end_time":"' + end_time + '"}',
             success: function (data) {
                 if (isEmpty(data.d)) { flog++; if (flog == names.length) { loadingClose(); layerAlert("该时间段内无记录数据或者是加载错误，请稍后重试！"); } return; }
                 data = data.d;
                 var new_data = new Array();
                 data.forEach(function (e, j) {
                     var a = new Array();
+                    var str = eval("e." + name);
+                    console.log("i:" + i);
+                    console.log("names:" + names);
                     e.DateTime = e.DateTime.toString();
                     a.push(e.DateTime.substring(e.DateTime.indexOf('(') + 1, e.DateTime.indexOf(')')) * 1 + getTime8h); //获取数字时间戳
-                    a.push(e.Val);
+                    a.push(str);
                    // console.log("a:"+a);
                     new_data.push(a);
                 });
+                var nameTrue = nameParents[i]+name;
                 seriesOptions[i] = {
 
-                    name: name,
+                    name: nameTrue,
                     data: new_data,
                     id: 'dataseries' + i,
 

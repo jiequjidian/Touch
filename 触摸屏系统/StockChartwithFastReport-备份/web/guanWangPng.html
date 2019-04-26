@@ -1,11 +1,10 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<iframe name=islogin src="/web/verifyLogin.aspx" style="visibility:hidden" width=0 height=0></iframe>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="综合分析监控信息平台 图表(StockChart)" />
     <meta name="keywords" content="HTML, CSS, JS, JavaScript, bootstrap, web development,StockChart" />
@@ -15,27 +14,43 @@
     <link href="../assets/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/bootstrap-3.3.4-dist/css/buttons.css" rel="stylesheet" type="text/css" />
     <link href="../web-css/bootstrap-extends.css" rel="stylesheet" type="text/css" />
-    <link href="../web-css/demo.css" rel="stylesheet" type="text/css" />
     <script src="../assets/jQuery/jquery-1.11.2.min.js" type="text/javascript"></script>
-    <link href="../web-css/test.css" rel="stylesheet" />
     <script src="../assets/bootstrap-3.3.4-dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <title>主页</title>
+    <title></title>
+    <style type="text/css">
+
+        form {
+            overflow: auto;
+            width: 100%;
+            height: 900px;
+            ;
+            /*background-color: red;*/
+            /*背景图片*/
+            background-image: url("/assets/img/青浦泵站流程图.gif");
+            /*图片不自动重复*/
+            background-repeat: no-repeat;
+            /*图片的位置*/
+            background-position: center top;
+            /* 图片的附着方式相对元素固定*/
+            background-attachment: scroll;
+            background-size: 100%;
+        }
+    </style>
 </head>
 <body>
-    <script src="../web-js/test.js"></script>
     <div class="row" style="margin-right: 0px; margin-left: 0px;">
         <div class="top-nav">
             <div class="container">
                 <div class="navbar-header">
                     <a href="javascript:document.location.reload();" class="navbar-brand">综合分析监控信息平台</a>
                 </div>
-                <ul class="nav navbar-nav top-navbar-tabs">
-                    <li>
-                        <a href="javascript:void(0)">主页</a>
+                <ul class="nav navbar-nav top-navbar-tabs ">
 
+                    <li>
+                        <a href="/web/Liucheng.html">主页</a>
                     </li>
-                    <li class=""><a href="/web/index.html">曲线</a> </li>
-                    <li class=""><a href="../Server/baobiao.aspx">报表</a> </li>
+                    <li><a href="/web/index.html">曲线</a> </li>
+                    <li><a href="../Server/baobiao.aspx">报表</a> </li>
                     <li class="dropdown active">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
                            aria-expanded="true">导航图<b class="caret"></b></a>
@@ -45,8 +60,9 @@
                             <li><a href="/web/guanWangPng.html" onclick="" target="_self">管网图</a></li>
                         </ul>
                     </li>
+
                 </ul>
-                <ul class="nav navbar-nav navbar-right" style="margin-right: -120px;">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: -90px;">
                     <li>
                         <p class="login-user-info" style="margin: 14px 0px 0px;">
                             系统当前时间：<b class="text-danger" id="systemCurr_Time"></b>
@@ -59,23 +75,47 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 page-container">
-                <div id="container" style="min-width: 100%; width: 100%; height:675px">
-                    <div class="test">
-                        <table id="tab" border="1" cellspacing=0 bgcolor="white" align="right">
-                            <tr><td>前缺氧1/1#DO</td><td>前缺氧2/2#DO</td><td>前好氧1/3#DO</td><td>前好氧1/1#NH3-N</td></tr>
-                            <tr><td><input id="Val" type="text" /></td><td><input id="Val1" type="text" /></td><td><input id="Val2" type="text" /></td><td><input id="Val3" type="text" /></td></tr>
-                            <tr><td>前好氧2/4#DO</td><td>前好氧2/1#NH3-N</td><td>后缺氧1/1#MLSS</td><td>后缺氧2/2#MLSS</td></tr>
-                            <tr><td><input id="Val4" type="text" /></td><td><input id="Val5" type="text" /></td><td><input id="Val6" type="text" /></td><td><input id="Val7" type="text" /></td></tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
-    <script src="../assets/layer-v1.9.2/layer/layer.js" type="text/javascript"></script>
-    <script src="../assets/layer-v1.9.2/layer/extend/layer.ext.js" type="text/javascript"></script>
-    <!--<script src="../web-js/common.js"></script>-->
+    <form>
+        <div>
+            这是管网图,
+            先帝创业为伴而中道崩殂
+            今天下三分
+            益州疲敝
+            此诚危急存亡之秋也
+            然侍卫之臣不懈于内
+            忠志之士忘身于外者
+            盖追先帝之殊遇
+            欲报之于陛下也
+            诚宜开张圣听
+            以光先帝遗德
+            恢弘志士之气
+            不宜妄自菲薄
+            引喻失意
+            以塞忠谏之路也
+            忠志之士忘身于外者
+            盖追先帝之殊遇
+            欲报之于陛下也
+            诚宜开张圣听
+            以光先帝遗德
+            恢弘志士之气
+            不宜妄自菲薄
+            引喻失意
+            以塞忠谏之路也
+            忠志之士忘身于外者
+            盖追先帝之殊遇
+            欲报之于陛下也
+            诚宜开张圣听
+            以光先帝遗德
+            恢弘志士之气
+            不宜妄自菲薄
+            引喻失意
+            以塞忠谏之路也
+        </div>
+
+    </form>
+
+
 </body>
 </html>

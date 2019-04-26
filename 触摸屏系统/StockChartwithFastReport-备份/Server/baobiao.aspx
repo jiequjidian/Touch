@@ -119,6 +119,15 @@
                     </li>
                     <li class=""><a href="/web/index.html">曲线</a> </li>
                     <li class="active"><a href="../Server/baobiao.aspx">报表</a> </li>
+                   <li class="dropdown active">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
+                           aria-expanded="true">导航图<b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="/web/map.html" onclick="" target="_self" class="active">地图</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/web/guanWangPng.html" onclick="" target="_self">管网图</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="margin-right: -90px;">
                     <li>

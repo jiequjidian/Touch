@@ -104,13 +104,13 @@ public partial class Server_IndexDo : System.Web.UI.Page
     /// <param name="tb"></param>
     /// <returns></returns>
     [WebMethod]
-    public static List<DataStructure> GetData(string tb, string start_time, string end_time)
+    public static List<DataStructure> GetData(string tb,string tg, string start_time, string end_time)
     {
         try
         {
             using (QPCHARTEntities sce = new QPCHARTEntities())
             {
-                string Sql = @"select DateTime,Val,Ann from " + tb + " where DateTime>=@p1 and DateTime<=@p2";
+                string Sql = @"select DateTime,"+ tg + " from " + tb + " where DateTime>=@p1 and DateTime<=@p2";
                 List<DataStructure> result = sce.Database.SqlQuery<DataStructure>(Sql,
                      new SqlParameter { ParameterName = "p1", Value = DateTime.Parse(start_time) },
                     new SqlParameter { ParameterName = "p2", Value = DateTime.Parse(end_time) }).ToList();
