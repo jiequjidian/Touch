@@ -27,17 +27,6 @@
           <Property Name="MiMa" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Level" Type="int" />
         </EntityType>
-        <EntityType Name="华青路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
         <!--生成过程中发现错误:
 警告 6013: 表/视图“QPCHART1.dbo.汇金路”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
         <EntityType Name="汇金路">
@@ -71,18 +60,6 @@
           <Property Name="后液位" Type="float" />
           <Property Name="瞬时流量" Type="float" />
         </EntityType>-->
-        <EntityType Name="通波塘">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
         <!--生成过程中发现错误:
 警告 6013: 表/视图“QPCHART1.dbo.外青松”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
         <EntityType Name="外青松">
@@ -116,89 +93,9 @@
           <Property Name="后液位" Type="float" />
           <Property Name="瞬时流量" Type="float" />
         </EntityType>-->
-        <EntityType Name="新区路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
-        <EntityType Name="新业路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
-        <EntityType Name="赵巷A">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
-        <EntityType Name="赵巷B">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
-        <EntityType Name="赵巷C">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
-        <EntityType Name="赵重路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="datetime" Nullable="false" />
-          <Property Name="Val" Type="float" Nullable="false" />
-          <Property Name="Ann" Type="nvarchar" MaxLength="500" />
-          <Property Name="PH" Type="float" />
-          <Property Name="前液位" Type="float" />
-          <Property Name="后液位" Type="float" />
-          <Property Name="瞬时流量" Type="float" />
-        </EntityType>
         <EntityContainer Name="QPCHARTModelStoreContainer">
           <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="华青路" EntityType="Self.华青路" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="通波塘" EntityType="Self.通波塘" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="新区路" EntityType="Self.新区路" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="新业路" EntityType="Self.新业路" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="赵巷A" EntityType="Self.赵巷A" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="赵巷B" EntityType="Self.赵巷B" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="赵巷C" EntityType="Self.赵巷C" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="赵重路" EntityType="Self.赵重路" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -207,14 +104,6 @@
         <EntityContainer Name="QPCHARTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Menu" EntityType="QPCHARTModel.Menu" />
           <EntitySet Name="SysUser" EntityType="QPCHARTModel.SysUser" />
-          <EntitySet Name="华青路" EntityType="QPCHARTModel.华青路" />
-          <EntitySet Name="通波塘" EntityType="QPCHARTModel.通波塘" />
-          <EntitySet Name="新区路" EntityType="QPCHARTModel.新区路" />
-          <EntitySet Name="新业路" EntityType="QPCHARTModel.新业路" />
-          <EntitySet Name="赵巷A" EntityType="QPCHARTModel.赵巷A" />
-          <EntitySet Name="赵巷B" EntityType="QPCHARTModel.赵巷B" />
-          <EntitySet Name="赵巷C" EntityType="QPCHARTModel.赵巷C" />
-          <EntitySet Name="赵重路" EntityType="QPCHARTModel.赵重路" />
         </EntityContainer>
         <EntityType Name="Menu">
           <Key>
@@ -237,101 +126,6 @@
           <Property Name="YongHu" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="MiMa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Level" Type="Int32" />
-        </EntityType>
-        <EntityType Name="华青路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="通波塘">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="新区路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="新业路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="赵巷A">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="赵巷B">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="赵巷C">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
-        </EntityType>
-        <EntityType Name="赵重路">
-          <Key>
-            <PropertyRef Name="DateTime" />
-          </Key>
-          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Val" Type="Double" Nullable="false" />
-          <Property Name="Ann" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="PH" Type="Double" />
-          <Property Name="前液位" Type="Double" />
-          <Property Name="后液位" Type="Double" />
-          <Property Name="瞬时流量" Type="Double" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -360,109 +154,6 @@
                 <ScalarProperty Name="Level" ColumnName="Level" />
                 <ScalarProperty Name="MiMa" ColumnName="MiMa" />
                 <ScalarProperty Name="YongHu" ColumnName="YongHu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="华青路">
-            <EntityTypeMapping TypeName="QPCHARTModel.华青路">
-              <MappingFragment StoreEntitySet="华青路">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="通波塘">
-            <EntityTypeMapping TypeName="QPCHARTModel.通波塘">
-              <MappingFragment StoreEntitySet="通波塘">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="新区路">
-            <EntityTypeMapping TypeName="QPCHARTModel.新区路">
-              <MappingFragment StoreEntitySet="新区路">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="新业路">
-            <EntityTypeMapping TypeName="QPCHARTModel.新业路">
-              <MappingFragment StoreEntitySet="新业路">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="赵巷A">
-            <EntityTypeMapping TypeName="QPCHARTModel.赵巷A">
-              <MappingFragment StoreEntitySet="赵巷A">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="赵巷B">
-            <EntityTypeMapping TypeName="QPCHARTModel.赵巷B">
-              <MappingFragment StoreEntitySet="赵巷B">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="赵巷C">
-            <EntityTypeMapping TypeName="QPCHARTModel.赵巷C">
-              <MappingFragment StoreEntitySet="赵巷C">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="赵重路">
-            <EntityTypeMapping TypeName="QPCHARTModel.赵重路">
-              <MappingFragment StoreEntitySet="赵重路">
-                <ScalarProperty Name="瞬时流量" ColumnName="瞬时流量" />
-                <ScalarProperty Name="后液位" ColumnName="后液位" />
-                <ScalarProperty Name="前液位" ColumnName="前液位" />
-                <ScalarProperty Name="PH" ColumnName="PH" />
-                <ScalarProperty Name="Ann" ColumnName="Ann" />
-                <ScalarProperty Name="Val" ColumnName="Val" />
-                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿
+//wsc = new WebSocket("ws://10.0.0.134:6690/WsServices");
+$(function () {
     //获取需要显示的表，获取结果构造zTree 树
     $.ajax({
         type: "Post",
@@ -31,8 +33,9 @@ var filterMenu = function (v) {
     //names = arrayIntersection(v, old_names);
     names = v[0];
     nameParents = v[1];
-    console.log("names:" + names);
-    console.log("names:" + names);
+    nameSeries = v[2];
+    console.log("names@@@:" + JSON.stringify(names));
+    console.log("nameSeries@@@:" + JSON.stringify( nameSeries));
     if (!isEmpty(names)) {
         getStockData();
     }
@@ -43,45 +46,97 @@ var getStockData = function () {
     loading();
     seriesOptions = [];
     var flog = 0, n = 0;
-    names.forEach(function (name, i) {
+    nameSeries.forEach(function (name, i)
+    {
+        console.log("i :" + i);
+        console.log("nameParents[i]  :" + nameParents[i]);
+        console.log(" names[i] :" + names[i]);
         $.ajax({
             type: "Post",
             url: "../Server/IndexDo.aspx/GetData",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            data: '{"tb":"' + nameParents[i] + '","tg":"' + name+ '","start_time":"' + start_time + '","end_time":"' + end_time + '"}',
-            success: function (data) {
-                if (isEmpty(data.d)) { flog++; if (flog == names.length) { loadingClose(); layerAlert("该时间段内无记录数据或者是加载错误，请稍后重试！"); } return; }
-                data = data.d;
-                var new_data = new Array();
-                data.forEach(function (e, j) {
-                    var a = new Array();
-                    var str = eval("e." + name);
-                    console.log("i:" + i);
-                    console.log("names:" + names);
-                    e.DateTime = e.DateTime.toString();
-                    a.push(e.DateTime.substring(e.DateTime.indexOf('(') + 1, e.DateTime.indexOf(')')) * 1 + getTime8h); //获取数字时间戳
-                    a.push(str);
-                   // console.log("a:"+a);
-                    new_data.push(a);
-                });
-                var nameTrue = nameParents[i]+name;
-                seriesOptions[i] = {
+            traditional: true,//这个参数必须添加，采用传统方式转换
+            data: '{"tb":"' + nameParents[i] + '","tag":"' + names[i] + '","start_time":"' + start_time + '","end_time":"' + end_time + '"}',
+            success: function (result) {
+              
+                if (result.d == null) {
+                    flog++;
+                    if (flog == names.length)
+                    {
+                        loadingClose(); layerAlert("该时间段内无记录数据或者是加载错误，请稍后重试！");
+                    } return;
+                }
 
-                    name: nameTrue,
-                    data: new_data,
-                    id: 'dataseries' + i,
+                result = jQuery.parseJSON(result.d); //JSON再次转换为Table 形式； 形式为"{"x":1,"y0":1,"y1":1,"y2":1},{...}"
 
-                    events: { click: function (e) { editAnn(Highcharts.dateFormat('%Y-%m-%d %H:%M', e.point.x)); } }
-                    //tooltip: { valueDecimals: 2 }
-                };
+               // for (let c in nameSeries)
+                    //var series = chart.series[i];
+                   
+                    var new_data = new Array();
+                    for (let c1 in result) {//2.将data中的每列数据挨列取出                    
+                        var dataX = result[c1]["x"] + getTime8h;
+                        let str = eval("\"" + nameSeries[i] + "\"");
+                        var dataY = result[c1][str];
+                        //series.addPoint([dataX, dataY]);  
+                        var a = new Array(); 
+                        a.push(dataX); //获取数字时间戳
+                        a.push(dataY);
+                        new_data.push(a);
+                       // console.log("new_data :" + JSON.stringify( new_data));
+                    };
+                    //for (var j = 0; j < result.length; j++) {
+                    //    console.log("shuju:" + JSON.stringify(result[j]));
+                //}
+               // new_data = [[ 1, 2], [ 3, 4]];
+                    seriesOptions[i] = {
+
+                        name: nameSeries[i],
+                        data: new_data,
+                        id: 'dataseries' + i,
+
+                        events: {
+                            click: function (e) {
+                                editAnn(Highcharts.dateFormat('%Y-%m-%d %H:%M', e.point.x));
+                            }
+                        }
+                        //tooltip: { valueDecimals: 2 }
+                    };
+
+               
+                //data = data.d;
+                //var new_data = new Array();
+                //data.forEach(function (e, j) {
+                //    var a = new Array();                    
+                //    var str = eval("e." + name);
+                //    console.log("i:" + i);                    
+                //    e.DateTime = e.DateTime.toString();
+                //    timeOnline = e.DateTime.substring(e.DateTime.indexOf('(') + 1, e.DateTime.indexOf(')')) * 1 + getTime8h;
+                //    a.push(timeOnline); //获取数字时间戳
+                //    a.push(str);
+                //   // console.log("a:"+a);
+                //    new_data.push(a);
+                //});
+                //seriesOptions[i] = {
+
+                //    name: nameSeries[i],
+                //    data: new_data,
+                //    id: 'dataseries' + i,
+
+                //    events: {
+                //        click: function (e) {
+                //            editAnn(Highcharts.dateFormat('%Y-%m-%d %H:%M', e.point.x));
+                //        }
+                //    }
+                //    //tooltip: { valueDecimals: 2 }
+                //};
                 
                
                 //以下构造注解
                 if (isdis_Note) {
                     var seriesOptionsData = new Array();
                     var k = 0;
-                    data.forEach(function (e, j) {
+                    result.forEach(function (e, j) {
                         if (e.Ann != null || e.Ann != undefined) {
                             e.DateTime = e.DateTime.toString();
                             seriesOptionsData[k++] =
@@ -139,6 +194,7 @@ var getStockData = function () {
 //编辑\添加注解
 var editAnn = function (_editAnnTime) {
     editAnnTime = _editAnnTime;
+    //如果已经获取用户信息（getPermission），则执行editAnnSave函数
     loginValidation(getPermission, editAnnSave);
 };
 var editAnnSave = function () {
