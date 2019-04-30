@@ -14,6 +14,7 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Reflection;
 
 namespace websocket_server_form_
 {
@@ -114,13 +115,21 @@ namespace websocket_server_form_
             }
             
         }
-       
+
 
         private void button3_Click(object sender, EventArgs e)
         {
+            string[] nameBeng = { "赵重路", "通波塘", "华青路", "新业路", "新区路", "赵巷A", "赵巷B", "赵巷C", "金星路", "外青松", "新金路", "汇金路", "民乐路", "新城一站" };
+            string[] nameSpell = { "ZCL", "TBT", "HQL", "XYL", "XQL", "ZXA", "ZXB", "ZXC", "JXL", "WQS", "XJL", "HJL", "ML", "XCYZ" };
+            for (int i = 0; i < nameSpell.Length; i++)
+            {//遍历所有泵站
+               //1.读取该泵站在数据库中的表格数据，返回datatable本地表
 
+            //2.遍历数据采集端上传的数据rb，将rb中该泵站的各值更新到本地表中
 
-
+            //3.将本地表更新到数据库
+              
+            }
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -359,6 +368,13 @@ namespace websocket_server_form_
             myDispose.appendToSQL(sqlTable);
            // return true;
         }
+        //string[] nameBeng = { "赵重路", "通波塘", "华青路", "新业路", "新区路", "赵巷A", "赵巷B", "赵巷C", "金星路", "外青松", "新金路", "汇金路", "民乐路", "新城一站" };
+        //string[] nameSpell = { "ZCL", "TBT", "HQL", "XYL", "XQL", "ZXA", "ZXB", "ZXC", "JXL", "WQS", "XJL", "HJL", "ML", "XCYZ" };
+        
+
+
+       
+
     }
 
    

@@ -67,3 +67,24 @@ D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(fo
 D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Debug\websocket-server(form).csproj.CopyComplete
 D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Debug\websocket-server(form).exe
 D:\VS\公司项目-已完成\websocket-server(form) - 副本\websocket-server(form)\obj\Debug\websocket-server(form).pdb
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-server(form).exe.config
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-server(form).exe
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-server(form).pdb
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.dll
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\Newtonsoft.Json.dll
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-sharp.dll
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.xml
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\Newtonsoft.Json.xml
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-sharp.xml
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csprojAssemblyReference.cache
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.Form1.resources
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.Properties.Resources.resources
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csproj.GenerateResource.cache
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csproj.CoreCompileInputs.cache
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csproj.CopyComplete
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).exe
+C:\Users\小样\Desktop\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).pdb

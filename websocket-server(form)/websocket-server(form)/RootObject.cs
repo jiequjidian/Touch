@@ -23,7 +23,7 @@ namespace websocket_server_form_
         public string ID2 { get; set; }
         public string Value { get; set; }
     }
-     class RootObject
+    class RootObject
     {
         public string key;
         public List<upDate> value { get; set; }
@@ -31,4 +31,17 @@ namespace websocket_server_form_
         //public List<Employees> dataSome2 { get; set; }
         //public List<Manager> manager { get; set; }
     }
+    
+        public class normalData
+        {
+            public DateTime DateTime;
+            public float Val;
+            public string Ann;
+            public float PH;
+            public double 前液位;
+            public float 后液位;
+            public float 瞬时流量;
+        }
+       
+    
 }
