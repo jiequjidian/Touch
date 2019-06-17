@@ -65,22 +65,22 @@
             this.退出ToolStripMenuItem,
             this.显示主界面ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.退出ToolStripMenuItem.Text = "显示主界面";
-            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.显示主界面ToolStripMenuItem_Click);
             // 
             // 显示主界面ToolStripMenuItem
             // 
             this.显示主界面ToolStripMenuItem.Name = "显示主界面ToolStripMenuItem";
-            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.显示主界面ToolStripMenuItem.Text = "退出";
-            this.显示主界面ToolStripMenuItem.Click += new System.EventHandler(this.显示主界面ToolStripMenuItem_Click);
+            this.显示主界面ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // button1
             // 
