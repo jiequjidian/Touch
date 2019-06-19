@@ -181,8 +181,6 @@ namespace websocket_server_form_
     {
         int count = 0;
         int flagFirst = 0;
-        int flagSessions = 0;
-        int flagSend = 0;
         protected override void OnOpen()
         {
             Console.WriteLine("Connection Open");
@@ -231,30 +229,30 @@ namespace websocket_server_form_
                 
 
             //如果有新连接，则立刻从数据库更新一条数据
-            if (Sessions.Count != flagSessions)
-            {
-                List<downDate> rd = new List<downDate>();
-                DataTable downTable = readSQL();
+            //if (Sessions.Count != flagSessions)
+            //{
+            //    List<downDate> rd = new List<downDate>();
+            //    DataTable downTable = readSQL();
                 
-                //Console.WriteLine("key:" + rb[0].key);          
-                foreach (DataRow row in downTable.Rows)
-                {//第0列是id，第1列是时间，第2列是泵名，第3列开始是各值
-                    for(int j=3;j< downTable.Columns.Count;j++)
-                    {
-                        downDate rcChild = new downDate();                       
-                        rcChild.ID0 = "";
-                        rcChild.ID1 = row["bengName"].ToString().Trim();
-                        rcChild.ID2 = downTable.Columns[j].ColumnName.Trim();
-                        rcChild.Value = row[j].ToString().Trim();
-                        rd.Add(rcChild);
-                    }
-                }
-                List<downDate> kkkk = rd;
-                Sessions.Broadcast(JsonConvert.SerializeObject(rd));
-                flagSessions = Sessions.Count;
-                flagSend = 1;
-            }
-            else
+            //    //Console.WriteLine("key:" + rb[0].key);          
+            //    foreach (DataRow row in downTable.Rows)
+            //    {//第0列是id，第1列是时间，第2列是泵名，第3列开始是各值
+            //        for(int j=3;j< downTable.Columns.Count;j++)
+            //        {
+            //            downDate rcChild = new downDate();                       
+            //            rcChild.ID0 = "";
+            //            rcChild.ID1 = row["bengName"].ToString().Trim();
+            //            rcChild.ID2 = downTable.Columns[j].ColumnName.Trim();
+            //            rcChild.Value = row[j].ToString().Trim();
+            //            rd.Add(rcChild);
+            //        }
+            //    }
+            //    List<downDate> kkkk = rd;
+            //    Sessions.Broadcast(JsonConvert.SerializeObject(rd));
+            //    flagSessions = Sessions.Count;
+            //    flagSend = 1;
+            //}
+            //else
             {
                 //if(flagSend==0)
                 {
@@ -306,15 +304,15 @@ namespace websocket_server_form_
 
         }
         //读取数据库中上一次存入的数据（末尾13行）
-        public DataTable readSQL()
-        {
-            DataTable mytable = new DataTable();
-            SQLdispose myDispose = new SQLdispose();
-            string strSQL = "select top 14 * from DataInfo order by id desc ";
-            mytable = myDispose.ExecuteWithReturn(strSQL);
-            int ccc = 0;
-            return mytable;
-        }
+        //public DataTable readSQL()
+        //{
+        //    DataTable mytable = new DataTable();
+        //    SQLdispose myDispose = new SQLdispose();
+        //    string strSQL = "select top 14 * from DataInfo order by id desc ";
+        //    mytable = myDispose.ExecuteWithReturn(strSQL);
+        //    int ccc = 0;
+        //    return mytable;
+        //}
         public string[] readSQLHead()
         {
             SQLdispose myDispose = new SQLdispose();
