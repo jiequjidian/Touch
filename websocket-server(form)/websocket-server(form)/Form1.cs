@@ -46,13 +46,29 @@ namespace websocket_server_form_
             }
           
         }
-       
-        
+
+
         //更改显示框函数
+        string[] rbText = new string[2];
+        int rbLineNum = 0;
         public void UpdateTextBox( string txt)
-        {
+        {           
             if (!richTextBox1.InvokeRequired)
             {
+                rbLineNum++;
+                //若更新次数达到1000，保留500次的数据
+                if (rbLineNum<=500)
+                {
+                    rbText[0] += txt;
+                }
+               else if (rbLineNum>500&&rbLineNum<=1000)
+                {
+                    rbText[1] += txt;
+                }               
+                else
+                {
+                    richTextBox1.Text = rbText[1];
+                }
                 int pos = richTextBox1.SelectionStart;
                 richTextBox1.AppendText(txt);
                 richTextBox1.SelectionStart = pos;
