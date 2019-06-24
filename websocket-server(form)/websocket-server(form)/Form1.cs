@@ -15,6 +15,8 @@ using WebSocketSharp.Server;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Reflection;
+using System.Net;
+using System.Net.Sockets;
 
 namespace websocket_server_form_
 {
@@ -31,24 +33,46 @@ namespace websocket_server_form_
             //this.ControlBox = false;
         }
         
-       
+       /// <summary>
+       /// 主窗体加载
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            //创建websocketserver实例
-            var wssv = new WebSocketServer("ws://0.0.0.0:6690");
 
+            string ipStr= GetLocalIP();
+            Console.WriteLine("本机IP：" + ipStr);
+            //创建websocketserver实例
+
+            var wssv = new WebSocketServer("ws://"+ ipStr+":6690");
             wssv.AddWebSocketService<WsServices>("/WsServices");           
             ////开启websocket
             wssv.Start();
             if(wssv.Port !=0)
-            {
-                Console.WriteLine(wssv.Port);
+            {//打印当前ip和端口号
+                Console.WriteLine("IP:"+wssv.Address);
+                Console.WriteLine("端口号"+wssv.Port);
             }
-          
+
+            if (wssv.IsListening)
+            {
+                Console.WriteLine("@@");
+                Console.WriteLine("Listening on port {0}, and providing WebSocket services:", wssv.Port);
+                foreach (var path in wssv.WebSocketServices.Paths)
+                {
+                    Console.WriteLine("- {0}", path);
+                    Console.WriteLine("@");
+                    Console.WriteLine(path);
+                }
+                    
+                Console.WriteLine("@@");
+            }
         }
 
-
-        //更改显示框函数
+        /// <summary>
+        /// 更新数据显示框
+        /// </summary>
         string[] rbText = new string[2];
         int rbLineNum = 0;
         public void UpdateTextBox( string txt)
@@ -65,7 +89,7 @@ namespace websocket_server_form_
                 {
                     rbText[1] += txt;
                 }               
-                else
+                else 
                 {
                     richTextBox1.Text = rbText[1];
                 }
@@ -81,9 +105,8 @@ namespace websocket_server_form_
                 deleTestlbl de = UpdateTextBox;
                 this.Invoke(de, txt);
             }
-
         }
-        //无用，不可删除
+        //始终将光标定位到最新数据
         private void richTextBox1_ContentsResized(object sender, ContentsResizedEventArgs e)
         {
             richTextBox1.SelectionStart = richTextBox1.Text.Length;                    //rtbReceive为控件的名字（自己取）
@@ -94,13 +117,13 @@ namespace websocket_server_form_
         {
             // 取消关闭窗体
             e.Cancel = true;
-
             // 将窗体变为最小化
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false; //不显示在系统任务栏 
             notifyIcon1.Visible = true; //托盘图标可见 
         }
 
+        //任务栏图标双击事件
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
@@ -128,11 +151,10 @@ namespace websocket_server_form_
             {
                 richTextBox1.ReadOnly = false;
                 button2.Text = "暂停";
-            }
-            
+            }            
         }
 
-
+        //更新按钮点击事件
         private void button3_Click(object sender, EventArgs e)
         {
             string[] nameBeng = { "赵重路", "通波塘", "华青路", "新业路", "新区路", "赵巷A", "赵巷B", "赵巷C", "金星路", "外青松", "新金路", "汇金路", "民乐路", "新城一站" };
@@ -147,7 +169,7 @@ namespace websocket_server_form_
               
             }
         }
-
+        //任务栏菜单
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
@@ -172,37 +194,63 @@ namespace websocket_server_form_
         }
 
 
-        //读取数据库中上一次存入的数据（末尾13行）
-        //public DataTable readSQL()
-        //{
-        //    DataTable mytable = new DataTable();
-        //    SQLdispose myDispose = new SQLdispose();
-        //    string strSQL = "select top 13 * from DataInfo order by id desc ";
-        //    mytable = myDispose.ExecuteWithReturn(strSQL);
-        //    int ccc = 0;
-        //    return mytable;
+        /// <summary>
+        /// 获取本机IP地址
+        /// </summary>
+        /// <returns>本机IP地址</returns>
+        public static string GetLocalIP()
+        {
+            try
+            {
+                string HostName = Dns.GetHostName(); //得到主机名
+                IPHostEntry IpEntry = Dns.GetHostEntry(HostName);
+                for (int i = 0; i < IpEntry.AddressList.Length; i++)
+                {
+                    //从IP地址列表中筛选出IPv4类型的IP地址
+                    //AddressFamily.InterNetwork表示此IP为IPv4,
+                    //AddressFamily.InterNetworkV6表示此地址为IPv6类型
+                    if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        return IpEntry.AddressList[i].ToString();
+                    }
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
 
-        //}
-    }
 
 
-
-
-
-
-    public delegate void MyDelegate(string Item1);//委托实质上是一个类
+    //创建委托，用于像数据库中写入数据
     public delegate void SQLDelegate(List<upDate> rb);
-    //websocket事项
+    /// <summary>
+    /// websocket事件处理
+    /// </summary>
     public class WsServices : WebSocketBehavior
     {
         int count = 0;
         int flagFirst = 0;
+        /// <summary>
+        /// 打开websocket连接
+        /// </summary>
         protected override void OnOpen()
         {
-            Console.WriteLine("Connection Open");
+            //获取客户端IP和port
+            string IPAddress = base.Sessions.Sessions.First().Context.UserEndPoint.ToString();
+            string IPAddress2 = base.Context.UserEndPoint.ToString();
+            Console.WriteLine("连接的客户端：" + IPAddress);
+            Console.WriteLine("连接的客户端：" + IPAddress2);
+
+            MessageBox.Show("Connection Open");
             base.OnOpen();
         }
-        //信息来往事件
+        /// <summary>
+        /// 信息到达处理
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnMessage(MessageEventArgs e)
         {
             //以list为容器存放opc传来的json array
@@ -212,7 +260,7 @@ namespace websocket_server_form_
             {
                 appendDataToSQL(rb);
                 flagFirst = 1;
-                Console.WriteLine("更新了@@第一条数据");
+                MessageBox.Show("更新了@@第一条数据");
             }
             else
             {
@@ -226,7 +274,7 @@ namespace websocket_server_form_
                         SQLDelegate mySqlDele = new SQLDelegate(appendDataToSQL);
                         mySqlDele(rb);
                         count = 1;
-                        Console.WriteLine("更新了一条数据" + aaa);
+                        MessageBox.Show("更新了一条数据" + aaa);
                     }
                 }
                 else
@@ -240,41 +288,11 @@ namespace websocket_server_form_
             deleTestlbl myDelegate = new deleTestlbl(Form1.mainForm.UpdateTextBox);
             myDelegate(message);
 
-           
-            
-                
-
-            //如果有新连接，则立刻从数据库更新一条数据
-            //if (Sessions.Count != flagSessions)
-            //{
-            //    List<downDate> rd = new List<downDate>();
-            //    DataTable downTable = readSQL();
-                
-            //    //Console.WriteLine("key:" + rb[0].key);          
-            //    foreach (DataRow row in downTable.Rows)
-            //    {//第0列是id，第1列是时间，第2列是泵名，第3列开始是各值
-            //        for(int j=3;j< downTable.Columns.Count;j++)
-            //        {
-            //            downDate rcChild = new downDate();                       
-            //            rcChild.ID0 = "";
-            //            rcChild.ID1 = row["bengName"].ToString().Trim();
-            //            rcChild.ID2 = downTable.Columns[j].ColumnName.Trim();
-            //            rcChild.Value = row[j].ToString().Trim();
-            //            rd.Add(rcChild);
-            //        }
-            //    }
-            //    List<downDate> kkkk = rd;
-            //    Sessions.Broadcast(JsonConvert.SerializeObject(rd));
-            //    flagSessions = Sessions.Count;
-            //    flagSend = 1;
-            //}
-            //else
+         
             {
-                //if(flagSend==0)
                 {
                     //发送给其他客户端
-                    List<downDate> rc = new List<downDate>();
-                    //Console.WriteLine("key:" + rb[0].key);          
+                    List<downDate> rc = new List<downDate>();    
                     for (int i = 0; i < rb.Count; i++)
                     {
                         downDate rcChild = new downDate();
@@ -289,46 +307,23 @@ namespace websocket_server_form_
                     Sessions.Broadcast(JsonConvert.SerializeObject(rc));
                     
                 }
-                //else
-                //{
-                //    if(flagSend>=1&&flagSend<20)
-                //    {
-                //        flagSend++;
-                //    }
-                //    else
-                //    {
-                //        flagSend = 0;
-                //    }
-                //}
+              
             }
            
         }
         //关闭服务事件
         protected override void OnClose(CloseEventArgs e)
         {
-            
-           // base.OnClose(e);
+            //base.OnClose(e);
         }
 
         public void appendData(string column, string values)
         {
-            //string column = "DataTime,PH,B_ID";
-            //string values = "2018/04/12,3.65,30";
-
             SQLdispose myDispose = new SQLdispose();
             myDispose.appendData(column, values);
 
         }
-        //读取数据库中上一次存入的数据（末尾13行）
-        //public DataTable readSQL()
-        //{
-        //    DataTable mytable = new DataTable();
-        //    SQLdispose myDispose = new SQLdispose();
-        //    string strSQL = "select top 14 * from DataInfo order by id desc ";
-        //    mytable = myDispose.ExecuteWithReturn(strSQL);
-        //    int ccc = 0;
-        //    return mytable;
-        //}
+      
         public string[] readSQLHead()
         {
             SQLdispose myDispose = new SQLdispose();
@@ -382,14 +377,15 @@ namespace websocket_server_form_
             myDispose.appendToSQL(sqlTable);
            // return true;
         }
-        //string[] nameBeng = { "赵重路", "通波塘", "华青路", "新业路", "新区路", "赵巷A", "赵巷B", "赵巷C", "金星路", "外青松", "新金路", "汇金路", "民乐路", "新城一站" };
-        //string[] nameSpell = { "ZCL", "TBT", "HQL", "XYL", "XQL", "ZXA", "ZXB", "ZXC", "JXL", "WQS", "XJL", "HJL", "ML", "XCYZ" };
-        
-
-
        
 
+     
+      
     }
+
+
+
+}
 
    
 }
