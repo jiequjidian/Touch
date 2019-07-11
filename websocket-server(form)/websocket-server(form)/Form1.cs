@@ -10,15 +10,19 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 using System.Net;
 using System.Net.Sockets;
+using System.Collections.Specialized;
 
 namespace websocket_server_form_
 {
     public delegate void deleTestlbl(string txt);
+
+    
     public partial class Form1 : Form
-    {
+    {       
         public static Form1 mainForm = null;
         public static char flag = '0';
         public static WebSocketServer wssv;
+        public static string ipStr;
         public Form1()
         {
             InitializeComponent();
@@ -34,33 +38,14 @@ namespace websocket_server_form_
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            string ipStr = GetLocalIP();
-            Console.WriteLine("本机IP：" + ipStr);
-            //创建websocketserver实例
-
-            var wssv = new WebSocketServer("ws://" + ipStr + ":6690");
-            wssv.AddWebSocketService<WsServices>("/WsServices");
-            ////开启websocket
-            wssv.Start();
-            if (wssv.Port != 0)
-            {//打印当前ip和端口号
-                Console.WriteLine("IP:" + wssv.Address);
-                Console.WriteLine("端口号" + wssv.Port);
-            }
-
-            if (wssv.IsListening)
+            string[] ipsStr = getLoalIP_all();
+            foreach (string str in ipsStr)
             {
-                Console.WriteLine("@@");
-                Console.WriteLine("Listening on port {0}, and providing WebSocket services:", wssv.Port);
-                foreach (var path in wssv.WebSocketServices.Paths)
-                {
-                    Console.WriteLine("- {0}", path);
-                    Console.WriteLine("@");
-                    Console.WriteLine(path);
-                }
-
-                Console.WriteLine("@@");
+                this.cmb_ip.Items.Add(str);
             }
+            cmb_ip.Text = "0.0.0.0";
+
+
         }
 
         /// <summary>
@@ -200,11 +185,35 @@ namespace websocket_server_form_
                 return ex.Message;
             }
         }
+        /// <summary>
+        /// 获取本机所有ipv4地址
+        /// </summary>
+        /// <returns></returns>
+        public static string[] getLoalIP_all()
+        {
+            IPAddress[] local_ips;
+            local_ips = Dns.GetHostAddresses(Dns.GetHostName());
+            StringCollection ipColletion = new StringCollection();
+            foreach (IPAddress ip_one in local_ips)
+            {
+                if (ip_one.AddressFamily == AddressFamily.InterNetwork)
+                {//如果ip地址是ipv4地址
+                    ipColletion.Add(ip_one.ToString());
+                }
 
+            }
+            string[] ipArray = new string[ipColletion.Count];
+            ipColletion.CopyTo(ipArray, 0);
+            return ipArray;
+        }
 
 
         //创建委托，用于像数据库中写入数据
         public delegate void SQLDelegate(List<upDate> rb);
+
+
+       
+
         /// <summary>
         /// websocket事件处理
         /// </summary>
@@ -223,7 +232,7 @@ namespace websocket_server_form_
                 Console.WriteLine("连接的客户端：" + IPAddress);
                 Console.WriteLine("连接的客户端：" + IPAddress2);
 
-                MessageBox.Show("Connection Open");
+               // MessageBox.Show("Connection Open");
                 base.OnOpen();
             }
             /// <summary>
@@ -240,13 +249,21 @@ namespace websocket_server_form_
                     //将task并行执行，避免主线程阻塞
                     new Action(async () =>
                     {
-                        await task_updateShow();  //更新窗体显示
-                        await task_formatAndBrodcast();//格式化数据并广播
-                        await task_writeSQL();//写入数据库
+                        task_updateShow();  //更新窗体显示
+                        try
+                        {
+                            task_formatAndBrodcast();//格式化数据并广播
+                        }
+                        catch
+                        {
+                            MessageBox.Show("数据有误");
+                            return;
+                        }
+                        task_writeSQL();//写入数据库
                     })();
 
                     //异步调用更新窗体显示======================================================
-                    async Task task_updateShow()
+                    void task_updateShow()
                     {
                         //更新窗体文本显示
                         string txt = "@==@" + e.Data + "\r\n";
@@ -255,7 +272,7 @@ namespace websocket_server_form_
                     }
 
                     //格式化数据并广播（异步）====================================================
-                    async Task task_formatAndBrodcast()
+                    void task_formatAndBrodcast()
                     {
                         //发送给其他客户端
                         List<downDate> rc = new List<downDate>();
@@ -274,7 +291,7 @@ namespace websocket_server_form_
                     }
 
                     //异步操作数据库===================================================================
-                    async Task task_writeSQL()
+                    void task_writeSQL()
                     {
                         //如果是第一条数据，立刻更新到数据库
                         if (flagFirst == 0)
@@ -295,7 +312,7 @@ namespace websocket_server_form_
                                     SQLDelegate mySqlDele = new SQLDelegate(appendDataToSQL);
                                     mySqlDele(rb);
                                     count = 1;
-                                    MessageBox.Show("更新了一条数据" + nowTime);
+                                    // MessageBox.Show("更新了一条数据" + nowTime);
                                 }
                             }
                             else
@@ -310,7 +327,7 @@ namespace websocket_server_form_
                     string txt = "@==@" + e.Data + "\r\n";
                     deleTestlbl myDelegate = new deleTestlbl(Form1.mainForm.UpdateTextBox);
                     myDelegate(txt);
-                    MessageBox.Show("数据有误，请核对");
+                    MessageBox.Show("数据有误，请核对  时间："+DateTime.Now.ToString());
                 }
 
             }
@@ -365,13 +382,56 @@ namespace websocket_server_form_
                 // return true;
             }
 
-
+            //预留外部发送websocket消息接口          
+            public  void sendData(string dataStr)
+            {
+                Sessions.Broadcast(dataStr);
+            }
 
 
         }
 
+        
+        /// <summary>
+        /// 确认连接池ip
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Tb_ipConfirm_Click(object sender, EventArgs e)
+        {
+            //创建websocketserver实例
+            ipStr = this.cmb_ip.Text;
+            wssv = new WebSocketServer("ws://" + ipStr + ":6690");
+            wssv.AddWebSocketService<WsServices>("/WsServices");
+            ////开启websocket
+            wssv.Start();
+            if (wssv.Port != 0)
+            {//打印当前ip和端口号
+                MessageBox.Show("IP:" + wssv.Address+ "端口号" + wssv.Port);
+            }
 
+            if (wssv.IsListening)
+            {
+                Console.WriteLine("@@");
+                Console.WriteLine("Listening on port {0}, and providing WebSocket services:", wssv.Port);
+                foreach (var path in wssv.WebSocketServices.Paths)
+                {
+                    Console.WriteLine("- {0}", path);
+                    Console.WriteLine("@");
+                    Console.WriteLine(path);
+                }
 
+                Console.WriteLine("@@");
+            }
+        }
+
+        private void Bt_send_Click(object sender, EventArgs e)
+        {
+            //string[] sendStr = new string[2];
+             string sendStr = cmb_send.Text;
+            wssv.WebSocketServices.Broadcast(sendStr);
+           
+        }
     }
 
 

@@ -109,3 +109,4 @@ D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\w
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csproj.CopyComplete
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).exe
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).pdb
+D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.form_message.resources
