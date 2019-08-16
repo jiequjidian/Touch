@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QPCHARTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="pId" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="open" Type="bit" />
+          <Property Name="icon" Type="nvarchar" MaxLength="100" />
+          <Property Name="iconOpen" Type="nvarchar" MaxLength="100" />
+          <Property Name="iconClose" Type="nvarchar" MaxLength="100" />
+          <Property Name="checked" Type="bit" />
+          <Property Name="nocheck" Type="bit" />
+        </EntityType>
+        <EntityType Name="SysUser">
+          <Key>
+            <PropertyRef Name="YongHu" />
+          </Key>
+          <Property Name="YongHu" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MiMa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Level" Type="int" />
+        </EntityType>
+        <EntityContainer Name="QPCHARTModelStoreContainer">
+          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QPCHARTModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="QPCHARTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Menu" EntityType="QPCHARTModel.Menu" />
+          <EntitySet Name="SysUser" EntityType="QPCHARTModel.SysUser" />
+        </EntityContainer>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="pId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="open" Type="Boolean" />
+          <Property Name="icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="iconOpen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="iconClose" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="checked" Type="Boolean" />
+          <Property Name="nocheck" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SysUser">
+          <Key>
+            <PropertyRef Name="YongHu" />
+          </Key>
+          <Property Name="YongHu" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MiMa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QPCHARTModelStoreContainer" CdmEntityContainer="QPCHARTEntities">
+          <EntitySetMapping Name="Menu">
+            <EntityTypeMapping TypeName="QPCHARTModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="nocheck" ColumnName="nocheck" />
+                <ScalarProperty Name="checked" ColumnName="checked" />
+                <ScalarProperty Name="iconClose" ColumnName="iconClose" />
+                <ScalarProperty Name="iconOpen" ColumnName="iconOpen" />
+                <ScalarProperty Name="icon" ColumnName="icon" />
+                <ScalarProperty Name="open" ColumnName="open" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pId" ColumnName="pId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SysUser">
+            <EntityTypeMapping TypeName="QPCHARTModel.SysUser">
+              <MappingFragment StoreEntitySet="SysUser">
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="MiMa" ColumnName="MiMa" />
+                <ScalarProperty Name="YongHu" ColumnName="YongHu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

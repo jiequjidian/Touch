@@ -1,0 +1,81 @@
+﻿body {
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  /*font-family: 'Segoe UI',Arial,'Microsoft Yahei',sans-serif;*/
+  font-size: 14px;
+  color: #333;
+  background-color: #FFF;
+ 
+  margin: 0;
+}
+.top-nav
+{
+    /*width:100%;*/
+     z-index: 1000;
+    -webkit-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+   /* background: #fff;*/
+   background:#00A7EB;
+}
+.page-container
+{
+    top:15px;
+}
+
+.left-menu 
+{
+    height:100%;
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.error
+{
+   border-color:Red;
+   box-shadow:0 1px 2px red inset, 0 0 8px red;
+}
+.navbar-nav>li>.dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.open>.dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 120px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown-menu li
+{
+   list-style: none;
+}
+
+.top-navbar-tabs li:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #2aabd2;
+    top: 18px;
+    right: 0;
+}

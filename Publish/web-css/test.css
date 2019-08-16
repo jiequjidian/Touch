@@ -1,0 +1,27 @@
+﻿
+.test{
+  position:absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: url('../assets/捕获.PNG');
+  background-size: cover;
+}
+table{
+    margin-right:50px;
+    line-height:40px;
+    font-size:18px;
+    font-family:'宋体';
+}
+.table tr{
+    height:120px;
+    line-height:120px;
+}
+td input {
+    border: none;
+   text-align:center;
+   font-size:14px;
+  
+}

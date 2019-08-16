@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f94196049ca4c4a9647d66bc978305a" Name="Diagram1" ZoomLevel="106">
+        <EntityTypeShape EntityType="QPCHARTModel.Menu" Width="1.5" PointX="0.625" PointY="1" />
+        <EntityTypeShape EntityType="QPCHARTModel.SysUser" Width="1.5" PointX="2.25" PointY="0.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
