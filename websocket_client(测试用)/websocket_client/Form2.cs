@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,21 @@ namespace websocket_client
         //"发送"按钮单击事件
         private void Bt1_Click(object sender, EventArgs e)
         {
-            serveA.dateSend(tb1.Text);
+            string beforeStr = tb1.Text.Trim();
+            
+            List<downData> comm = new List<downData>();
+            downData One = new downData();
+            One.id = 1;
+            One.key = "Channel2.ZXB.1HBENG_K";
+            One.Value = beforeStr;
+            comm.Add(One);
+            downData Two = new downData();
+            Two.id = 2;
+            Two.key = "Channel2.ZXB.1HBENG_T";
+            Two.Value = tb2.Text.Trim();
+            comm.Add(Two);
+            string trueStr = JsonConvert.SerializeObject(comm);
+            serveA.dateSend(trueStr);
         }
         /// <summary>
         /// 窗体关闭时触发

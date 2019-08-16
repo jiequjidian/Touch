@@ -97,11 +97,9 @@ D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\N
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-sharp.dll
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.xml
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\EntityFramework.SqlServer.xml
-D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\Newtonsoft.Json.pdb
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\Newtonsoft.Json.xml
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\websocket-sharp.xml
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csprojAssemblyReference.cache
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.Form1.resources
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.Properties.Resources.resources
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csproj.GenerateResource.cache
@@ -110,3 +108,4 @@ D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\w
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).exe
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).pdb
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket_server_form_.form_message.resources
+D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Debug\websocket-server(form).csprojAssemblyReference.cache

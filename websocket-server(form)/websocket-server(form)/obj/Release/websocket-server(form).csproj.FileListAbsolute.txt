@@ -77,3 +77,4 @@ D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Release
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).csproj.CopyComplete
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).exe
 D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Release\websocket-server(form).pdb
+D:\01,githubRoom\Touch\websocket-server(form)\websocket-server(form)\obj\Release\websocket_server_form_.form_message.resources

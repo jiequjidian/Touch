@@ -26,3 +26,5 @@ D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\obj\Debug\we
 D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\obj\Debug\websocket_client.csproj.CopyComplete
 D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\obj\Debug\websocket_client.exe
 D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\obj\Debug\websocket_client.pdb
+D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\bin\Debug\Newtonsoft.Json.dll
+D:\01,githubRoom\Touch\websocket_client(测试用)\websocket_client\bin\Debug\Newtonsoft.Json.xml

@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace websocket_server_form_
 {
+    //用于websocket连接池
+    class JsonDto
+    {
+        public string content { get; set; }
+        public string type { get; set; }
+        public string name { get; set; }
+    }
+
+
     public class upDate
     {
+        public int id { get; set; }
         public string key { get; set; }
         public string Value { get; set; }
     }

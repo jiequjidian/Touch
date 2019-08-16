@@ -208,12 +208,12 @@ namespace websocket_server_form_
         }
 
 
-        //创建委托，用于像数据库中写入数据
+        //创建委托，用于向数据库中写入数据
         public delegate void SQLDelegate(List<upDate> rb);
 
 
-       
 
+        static string linkId=null;
         /// <summary>
         /// websocket事件处理
         /// </summary>
@@ -221,11 +221,13 @@ namespace websocket_server_form_
         {
             static int count = 0;
             static int flagFirst = 0;
+          static string sourceId=null;
             /// <summary>
             /// 打开websocket连接
             /// </summary>
             protected override void OnOpen()
             {
+                linkId= base.Sessions.Sessions.First().ID;
                 //获取客户端IP和port
                 string IPAddress = base.Sessions.Sessions.First().Context.UserEndPoint.ToString();
                 string IPAddress2 = base.Context.UserEndPoint.ToString();
@@ -241,93 +243,147 @@ namespace websocket_server_form_
             /// <param name="e"></param>
             protected override void OnMessage(MessageEventArgs e)
             {
+                // string IPAddress3 = Sessions.Sessions.First().ID.ToString();
+                              
+
+                e.ToString();
                 try
                 {
                     //以list为容器存放opc传来的json array
                     List<upDate> rb = JsonConvert.DeserializeObject<List<upDate>>(e.Data);
-
-                    //将task并行执行，避免主线程阻塞
-                    new Action(async () =>
+                    WebSocketSessionManager sessionsOne = Sessions;
+                    if (rb != null)
                     {
-                        task_updateShow();  //更新窗体显示
-                        try
+                        switch (rb[0].id)
                         {
-                            task_formatAndBrodcast();//格式化数据并广播
-                        }
-                        catch
-                        {
-                            MessageBox.Show("数据有误");
-                            return;
-                        }
-                        task_writeSQL();//写入数据库
-                    })();
-
-                    //异步调用更新窗体显示======================================================
-                    void task_updateShow()
-                    {
-                        //更新窗体文本显示
-                        string txt = "@==@" + e.Data + "\r\n";
-                        deleTestlbl myDelegate = new deleTestlbl(Form1.mainForm.UpdateTextBox);
-                        myDelegate(txt);
-                    }
-
-                    //格式化数据并广播（异步）====================================================
-                    void task_formatAndBrodcast()
-                    {
-                        //发送给其他客户端
-                        List<downDate> rc = new List<downDate>();
-                        for (int i = 0; i < rb.Count; i++)
-                        {
-                            downDate rcChild = new downDate();
-                            string[] str3 = rb[i].key.Split('.');
-                            rcChild.ID0 = str3[0];
-                            rcChild.ID1 = str3[1];
-                            rcChild.ID2 = str3[2];
-                            rcChild.Value = rb[i].Value;
-                            rc.Add(rcChild);
-                        }
-
-                        Sessions.Broadcast(JsonConvert.SerializeObject(rc));
-                    }
-
-                    //异步操作数据库===================================================================
-                    void task_writeSQL()
-                    {
-                        //如果是第一条数据，立刻更新到数据库
-                        if (flagFirst == 0)
-                        {
-                            appendDataToSQL(rb);
-                            flagFirst = 1;
-                            MessageBox.Show("更新了@@第一条数据");
-                        }
-                        else
-                        {
-                            //每五分钟更新1条数据到数据库
-                            string nowTime = DateTime.Now.Minute.ToString();
-                            int anum = nowTime[nowTime.Length - 1] - '0';
-                            if (anum == 0 || anum == 5)
+                            case 0:
+                                task_updateShow();  //更新窗体显示
+                                string idCount = Sessions.IDs.Last();
+                                sourceId = idCount;
+                                break;
+                            //下行数据
+                            case 2:
+                            //Sessions.Broadcast(e.Data);
+                                Sessions.SendTo(e.Data, sourceId);
+                                break;
+                            //上行数据
+                            case 1:                        
+                            //将task并行执行，避免主线程阻塞
+                            new Action(async () =>
                             {
-                                if (count == 0)
+                                task_updateShow();  //更新窗体显示
+                                try
                                 {
-                                    SQLDelegate mySqlDele = new SQLDelegate(appendDataToSQL);
-                                    mySqlDele(rb);
-                                    count = 1;
-                                    // MessageBox.Show("更新了一条数据" + nowTime);
+                                    task_formatAndBrodcast();//格式化数据并广播
                                 }
+                                catch
+                                {
+                                    MessageBox.Show("数据有误");
+                                    return;
+                                }
+                                task_writeSQL();//写入数据库
+                            })();
+                                break;
+
+                            default:
+                                break;
+                        }
+                       
+
+                            //异步调用更新窗体显示======================================================
+                            void task_updateShow()
+                            {
+                                //更新窗体文本显示
+                                string txt = "@==@" + e.Data + "\r\n";
+                                deleTestlbl myDelegate = new deleTestlbl(Form1.mainForm.UpdateTextBox);
+                                myDelegate(txt);
+                            }
+
+                            //格式化数据并广播（异步）====================================================
+                            void task_formatAndBrodcast()
+                            {
+                           
+                            
+
+                            //Array idArray=sessionOne.Sessions.ToArray();
+
+                            //发送给其他客户端
+                            List<downDate> rc = new List<downDate>();
+                                for (int i = 0; i < rb.Count; i++)
+                                {
+                                    downDate rcChild = new downDate();
+                                    string[] str3 = rb[i].key.Split('.');
+                                    rcChild.ID0 = str3[0];
+                                    rcChild.ID1 = str3[1];
+                                    rcChild.ID2 = str3[2];
+                                    rcChild.Value = rb[i].Value;
+                                    rc.Add(rcChild);
+                                }
+                            if (sourceId != null)
+                            {
+                                Array destId= Sessions.IDs.ToArray();
+                                
+                                foreach(string idStr in destId)
+                                {
+                                    if (idStr != sourceId)
+                                    {
+                                        Sessions.SendTo(JsonConvert.SerializeObject(rc), idStr);
+                                    }
+                                   
+                                }                                
+                                string ccc = "";
+                               
                             }
                             else
                             {
-                                count = 0;
+                                
+                                Sessions.Broadcast(JsonConvert.SerializeObject(rc));
+                                //sessionOne.SendTo(JsonConvert.SerializeObject(rc),id);
+                                string aa = "";
                             }
-                        }
-                    }
+                           
+                            }
+
+                            //异步操作数据库===================================================================
+                            void task_writeSQL()
+                            {
+                                //如果是第一条数据，立刻更新到数据库
+                                if (flagFirst == 0)
+                                {
+                                    appendDataToSQL(rb);
+                                    flagFirst = 1;
+                                    MessageBox.Show("更新了@@第一条数据");  
+                                }
+                                else
+                                {
+                                    //每五分钟更新1条数据到数据库
+                                    string nowTime = DateTime.Now.Minute.ToString();
+                                    int anum = nowTime[nowTime.Length - 1] - '0';
+                                    if (anum == 0 || anum == 5)
+                                    {
+                                        if (count == 0)
+                                        {
+                                            SQLDelegate mySqlDele = new SQLDelegate(appendDataToSQL);
+                                            mySqlDele(rb);
+                                            count = 1;
+                                            // MessageBox.Show("更新了一条数据" + nowTime);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        count = 0;
+                                    }
+                                }
+                            }
+                    }                    
+                   
                 }
                 catch
                 {
                     string txt = "@==@" + e.Data + "\r\n";
                     deleTestlbl myDelegate = new deleTestlbl(Form1.mainForm.UpdateTextBox);
                     myDelegate(txt);
-                    MessageBox.Show("数据有误，请核对  时间："+DateTime.Now.ToString());
+                    MessageBox.Show("数据有误，请核对  时间：" + DateTime.Now.ToString());
                 }
 
             }
